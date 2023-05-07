@@ -1,0 +1,9 @@
+[submodule "server/scripts/ezlibs-scripts"]
+	path = server/scripts/ezlibs-scripts
+	url = https://github.com/Keristero/ezlibs-scripts
+[submodule "server/assets/ezlibs-assets"]
+	path = server/assets/ezlibs-assets
+	url = https://github.com/Keristero/ezlibs-assets
+[submodule "sources/Scriptable-OpenNetBattle-Server"]
+	path = sources/Scriptable-OpenNetBattle-Server
+	url = https://github.com/TheMaverickProgrammer/Scriptable-OpenNetBattle-Server

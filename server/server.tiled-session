@@ -1,0 +1,52 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "areas/default.tmx",
+    "expandedProjectPaths": [
+        "assets",
+        ".",
+        "assets/ezlibs-assets",
+        "assets/tiles",
+        "areas"
+    ],
+    "fileStates": {
+        "areas/default.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 813.75,
+                "y": 302.75
+            }
+        },
+        "assets/tiles/coffee.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/tiles/floor.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/tiles/home_warp.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "map.lastUsedFormat": "tmx",
+    "map.orientation": null,
+    "map.tileWidth": 64,
+    "openFiles": [
+        "areas/default.tmx",
+        "assets/tiles/floor.tsx",
+        "assets/tiles/home_warp.tsx",
+        "assets/tiles/coffee.tsx"
+    ],
+    "project": "server.tiled-project",
+    "recentFiles": [
+        "assets/tiles/coffee.tsx",
+        "assets/tiles/home_warp.tsx",
+        "assets/tiles/floor.tsx",
+        "areas/default.tmx"
+    ]
+}
