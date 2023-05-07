@@ -13,3 +13,5 @@ IF EXIST "server\net_battle_server.exe" (
 
 cd server
 net_battle_server.exe --port %port% --resend-budget 196608
+echo The server encounted an error and closed.
+PAUSE
