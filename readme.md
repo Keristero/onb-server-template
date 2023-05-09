@@ -22,6 +22,9 @@ first, you will need git in order to use this template.
 ## Docker Windows setup (cool kids alternative)
 1. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 1. Restart PC, yes, you have to...
+1. open a command prompt / PowerShell / terminal window in the folder you would like to start in.
+`on windows you can hold SHIFT and Right Click in the folder`
+1. paste and run `git clone --recurse-submodules --remote-submodules https://github.com/Keristero/onb-server-template.git`
 1. run docker_run.bat `docker_run.bat`
 
 - this should build the server in a docker container, copy it into your /server folder, and run your server.
