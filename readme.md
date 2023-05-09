@@ -8,7 +8,7 @@ This guide will set you up with your own ONB server with:
 **If you dont care about any of that and just want a quick server, go to the #builds channel in the discord, download the latest zip and run the exe**
 but if you have a big project in mind I encourage continuing 
 
-first, you will need git in order to use this template.
+first, you will need git in order to use this template, and if git does not work immediately after install, try restarting your pc.
 #### Git Download links
 [windows](https://git-scm.com/download/win)
 
