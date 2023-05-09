@@ -1,5 +1,6 @@
 # Somewhat easy ONB (Open Net Battle) server setup
 *aka ezservers?* 😉
+
 This guide will set you up with your own ONB server with:
 - the ONB server
 - ezlibs server scripts, which let you easily add NPCs, Shops, Items, and more.
