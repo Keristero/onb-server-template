@@ -12,12 +12,23 @@ first, you will need git in order to use this template.
 #### Git Download links
 [windows](https://git-scm.com/download/win)
 
-## Windows setup
+## Standard Windows setup 
 1. open a command prompt / PowerShell / terminal window in the folder you would like to start in.
 `on windows you can hold SHIFT and Right Click in the folder`
 1. paste and run `git clone --recurse-submodules --remote-submodules https://github.com/Keristero/onb-server-template.git`
-1. run start.bat `start.bat`
+1. run run.bat `run.bat`
 1. If all goes well, you should now be able to visit your server in game at `127.0.0.1:8765`
+
+## Docker Windows setup (cool kids alternative)
+1. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+1. Restart PC, yes, you have to...
+1. run docker_run.bat `docker_run.bat`
+
+- this should build the server in a docker container, copy it into your /server folder, and run your server.
+- you can view your server logs from the docker desktop application or with `logs_docker.bat`
+- stop the server with `stop_docker.bat`, if you dont stop the server it will auto reboot whenever it crashes.
+- if you want your server to also run on boot, tick `Start Docker Desktop when you log in` the Docker Desktop settings.
+
 
 ## A note of caution
 - If you edit any of the files in `ezlibs-scripts` or `ezlibs-custom`, the update script wont work anymore, if you have any customizations to make to ezlibs, open a pull request to the repository on my github, or limit them to the `ezlibs-custom\custom.lua` file

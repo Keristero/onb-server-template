@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  onb-server:
+    build: .
+    ports:
+    - "8765:8765/udp"
+    - "8765:8765/tcp"
+    volumes:
+      - ../server:/server
+    restart: unless-stopped
+    network_mode: bridge
