@@ -27,9 +27,6 @@ first, you will need git in order to use this template.
 1. paste and run `git clone --recurse-submodules --remote-submodules https://github.com/Keristero/onb-server-template.git`
 1. run docker_run.bat `docker_run.bat`
 
-- this should build the server in a docker container, copy it into your /server folder, and run your server.
-- you can view your server logs from the docker desktop application or with `logs_docker.bat`
-- stop the server with `stop_docker.bat`, if you dont stop the server it will auto reboot whenever it crashes.
 - if you want your server to also run on login, tick `Start Docker Desktop when you log in` the Docker Desktop settings.
 - Even better, you could schedule it to run on startup with the Task Scheduler.
 
