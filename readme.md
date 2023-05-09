@@ -33,7 +33,7 @@ Nicer than on windows.
 1. I assume you already know how to do this, but after you install docker engine, its basically just...
 2. sources/docker-compose up
 
-- From my experience docker engine will autorun on linux by default? pretty cool.
+- From memory docker engine will autorun on linux by default? pretty cool.
 
 ## A note of caution
 - If you edit any of the files in `ezlibs-scripts` or `ezlibs-custom`, the update script wont work anymore, if you have any customizations to make to ezlibs, open a pull request to the repository on my github, or limit them to the `ezlibs-custom\custom.lua` file
