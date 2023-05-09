@@ -20,6 +20,7 @@ first, you will need git in order to use this template.
 1. If all goes well, you should now be able to visit your server in game at `127.0.0.1:8765`
 
 ## Docker Windows setup (cool kids alternative)
+There is not much advantage to running the server in docker, but you can have it auto start and auto reboot when it crashes
 1. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 1. Restart PC, yes, you have to...
 1. open a command prompt / PowerShell / terminal window in the folder you would like to start in.
@@ -27,9 +28,12 @@ first, you will need git in order to use this template.
 1. paste and run `git clone --recurse-submodules --remote-submodules https://github.com/Keristero/onb-server-template.git`
 1. run docker_run.bat `docker_run.bat`
 
-- if you want your server to also run on login, tick `Start Docker Desktop when you log in` the Docker Desktop settings.
-- Even better, you could schedule it to run on startup with the Task Scheduler.
+## Docker Linux setup
+Nicer than on windows.
+1. I assume you already know how to do this, but after you install docker engine, its basically just...
+2. sources/docker-compose up
 
+- From my experience docker engine will autorun on linux by default? pretty cool.
 
 ## A note of caution
 - If you edit any of the files in `ezlibs-scripts` or `ezlibs-custom`, the update script wont work anymore, if you have any customizations to make to ezlibs, open a pull request to the repository on my github, or limit them to the `ezlibs-custom\custom.lua` file
