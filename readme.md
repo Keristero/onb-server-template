@@ -1,4 +1,6 @@
 # Somewhat easy ONB (Open Net Battle) server setup
+*aka ezservers?* 😉
+
 This guide will set you up with your own ONB server with:
 - the ONB server
 - ezlibs server scripts, which let you easily add NPCs, Shops, Items, and more.
@@ -8,7 +10,7 @@ This guide will set you up with your own ONB server with:
 **If you dont care about any of that and just want a quick server, go to the #builds channel in the discord, download the latest zip and run the exe**
 but if you have a big project in mind I encourage continuing 
 
-first, you will need git in order to use this template.
+first, you will need git in order to use this template, and if git does not work immediately after install, try restarting your pc.
 #### Git Download links
 [windows](https://git-scm.com/download/win)
 
@@ -20,6 +22,7 @@ first, you will need git in order to use this template.
 1. If all goes well, you should now be able to visit your server in game at `127.0.0.1:8765`
 
 ## Docker Windows setup (cool kids alternative)
+There is not much advantage to running the server in docker, but you can have it auto start and auto reboot when it crashes
 1. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 1. Restart PC, yes, you have to...
 1. open a command prompt / PowerShell / terminal window in the folder you would like to start in.
@@ -27,11 +30,12 @@ first, you will need git in order to use this template.
 1. paste and run `git clone --recurse-submodules --remote-submodules https://github.com/Keristero/onb-server-template.git`
 1. run docker_run.bat `docker_run.bat`
 
-- this should build the server in a docker container, copy it into your /server folder, and run your server.
-- you can view your server logs from the docker desktop application or with `logs_docker.bat`
-- stop the server with `stop_docker.bat`, if you dont stop the server it will auto reboot whenever it crashes.
-- if you want your server to also run on boot, tick `Start Docker Desktop when you log in` the Docker Desktop settings.
+## Docker Linux setup
+Nicer than on windows.
+1. I assume you already know how to do this, but after you install docker engine, its basically just...
+2. sources/docker-compose up
 
+- From memory docker engine will autorun on linux by default? pretty cool.
 
 ## A note of caution
 - If you edit any of the files in `ezlibs-scripts` or `ezlibs-custom`, the update script wont work anymore, if you have any customizations to make to ezlibs, open a pull request to the repository on my github, or limit them to the `ezlibs-custom\custom.lua` file
