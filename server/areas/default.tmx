@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.9.2" orientation="isometric" renderorder="right-down" width="30" height="20" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="5">
+<map version="1.8" tiledversion="1.9.2" orientation="isometric" renderorder="right-down" width="30" height="20" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="6">
  <tileset firstgid="1" source="../assets/tiles/floor.tsx"/>
  <tileset firstgid="4" source="../assets/tiles/home_warp.tsx"/>
  <tileset firstgid="9" source="../assets/tiles/coffee.tsx"/>
- <tileset firstgid="13" source="../assets/ezlibs-assets/ezcheckpoints/bn5cubegreen.tsx"/>
+ <tileset firstgid="13" source="../assets/ezlibs-assets/ezcheckpoints/bn5cubegreen_tile.tsx"/>
+ <tileset firstgid="17" source="../assets/objects/warp.tsx"/>
  <layer id="1" name="Tile Layer 1" width="30" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -13,9 +14,9 @@
 0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,1,1,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,1,1,1,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -35,6 +36,12 @@
    </properties>
   </object>
   <object id="2" gid="9" x="369" y="209" width="33" height="54"/>
-  <object id="4" gid="13" x="357" y="293" width="42" height="49"/>
+  <object id="5" name="To ezlibs" type="Custom Warp" gid="18" x="351.5" y="256.5" width="61" height="32">
+   <properties>
+    <property name="Direction" value="Up"/>
+    <property name="Target Area" value="ezlibs"/>
+    <property name="Target Object" type="int" value="9"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

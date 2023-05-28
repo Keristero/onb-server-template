@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.8" tiledversion="1.9.2" name="coffee" tilewidth="33" tileheight="54" tilecount="4" columns="4" objectalignment="bottom">
+<tileset version="1.4" tiledversion="1.4.1" name="coffee" tilewidth="33" tileheight="54" tilecount="4" columns="4" objectalignment="bottom">
  <tileoffset x="0" y="8"/>
  <grid orientation="orthogonal" width="64" height="32"/>
  <properties>
   <property name="Solid" type="bool" value="true"/>
  </properties>
- <image source="../objects/coffee.png" width="132" height="54"/>
+ <image source="coffee.png" width="132" height="54"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
    <object id="2" x="-5" y="46">
