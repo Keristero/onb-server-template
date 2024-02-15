@@ -1,6 +1,3 @@
-[submodule "server/scripts/ezlibs-scripts"]
-	path = server/scripts/ezlibs-scripts
-	url = https://github.com/Keristero/ezlibs-scripts
 [submodule "server/assets/ezlibs-assets"]
 	path = server/assets/ezlibs-assets
 	url = https://github.com/Keristero/ezlibs-assets

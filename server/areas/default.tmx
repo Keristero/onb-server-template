@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.9.2" orientation="isometric" renderorder="right-down" width="30" height="20" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="6">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="30" height="20" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="20">
  <tileset firstgid="1" source="../assets/tiles/floor.tsx"/>
  <tileset firstgid="4" source="../assets/tiles/home_warp.tsx"/>
  <tileset firstgid="9" source="../assets/tiles/coffee.tsx"/>
@@ -36,12 +36,60 @@
    </properties>
   </object>
   <object id="2" gid="9" x="369" y="209" width="33" height="54"/>
-  <object id="5" name="To ezlibs" type="Custom Warp" gid="18" x="351.5" y="256.5" width="61" height="32">
+  <object id="5" name="netflow test" type="Custom Warp" gid="18" x="351.5" y="256.5" width="61" height="32">
    <properties>
-    <property name="Direction" value="Up"/>
-    <property name="Target Area" value="ezlibs"/>
-    <property name="Target Object" type="int" value="9"/>
+    <property name="on_custom_warp" type="object" value="6"/>
    </properties>
+  </object>
+  <object id="6" type="transfer_player" x="296" y="208">
+   <properties>
+    <property name="_target_object" type="object" value="7"/>
+    <property name="_then" type="object" value="8"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="7" gid="18" x="384" y="160" width="61" height="32"/>
+  <object id="11" type="create_bot" x="240" y="200">
+   <properties>
+    <property name="bot" type="object" value="17"/>
+    <property name="on_actor_interaction" type="object" value="19"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="12" type="message_player" x="184" y="80">
+   <properties>
+    <property name="_then" type="object" value="0"/>
+    <property name="message" value="Nice warp!"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="13" type="on_player_area_transfer" x="128" y="96">
+   <properties>
+    <property name="on_player_area_transfer" type="object" value="12"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="14" type="Interactable" gid="9" x="240" y="240" width="33" height="54">
+   <properties>
+    <property name="on_object_interaction" type="object" value="11"/>
+   </properties>
+  </object>
+  <object id="17" type="bot_details" x="344" y="312">
+   <properties>
+    <property name="animation_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/prog.animation"/>
+    <property name="name" value="prog"/>
+    <property name="texture_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/prog.png"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="19" type="message_player" x="240" y="160">
+   <properties>
+    <property name="_then" type="object" value="0"/>
+    <property name="message" value="Wow, it actually worked!"/>
+    <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
+    <property name="mug_texture_path" value="/server/assets/ezlibs-assets/eznpcs/mug/prog.png"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
 </map>
