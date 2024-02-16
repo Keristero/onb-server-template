@@ -64,18 +64,14 @@ function update_tiled_project(tiled_project_path, tiled_types)
 end
 
 local function document_parameters(collection)
-    parameters = ''
+    local parameters = ''
     if collection then
-        parameters = parameters..'```c\n'
+        parameters = parameters..'<pre><code class="language-c">'
         for i, arg in ipairs(collection) do
-            local arg_text = arg.name..' ('..arg.type..')'
-            print(arg.default)
-            if arg.default then
-                arg_text = arg_text..' default:'..tostring(arg.default)
-            end
-            parameters = parameters..arg_text
+            local arg_text = arg.name..' //'..arg.type
+            parameters = parameters..arg_text..'<br>'
         end
-        parameters = parameters..'```'
+        parameters = parameters..'</code></pre>'
     end
     return parameters
 end
@@ -114,6 +110,7 @@ exporters.export_readme = function(nodes,readme_path,category_colors)
                     table.insert(rows,row)
                 end
 
+                print(rows)
                 local table_string = table_gen(rows, headings, {
                     style = "Markdown (Github)"
                 })

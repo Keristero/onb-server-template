@@ -41,10 +41,10 @@
     <property name="on_custom_warp" type="object" value="6"/>
    </properties>
   </object>
-  <object id="6" type="transfer_player" x="296" y="208">
+  <object id="6" type="transfer_player" x="304" y="192">
    <properties>
     <property name="_target_object" type="object" value="7"/>
-    <property name="_then" type="object" value="8"/>
+    <property name="_then" type="object" value="0"/>
    </properties>
    <point/>
   </object>
