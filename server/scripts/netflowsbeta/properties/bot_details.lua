@@ -57,6 +57,6 @@ return {
         [11]={
             name='name',
             type='string'
-        }
+        },
     }
 }

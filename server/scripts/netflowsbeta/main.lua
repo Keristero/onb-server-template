@@ -1,5 +1,5 @@
 local helpers = require('scripts/netflowsbeta/helpers')
-local export = require('scripts/netflowsbeta/export')
+local exporters = require('scripts/netflowsbeta/export/export')
 NetCached = require('scripts/netflowsbeta/NetCached')
 
 local classes = {}
@@ -25,7 +25,8 @@ end
 NetCached.cache_supported_classes(classes)
 
 --export tiled map editor type definitions
-export(classes,'server.tiled-project')
+local category_colors = exporters.export_tiled_types(classes,'server.tiled-project')
+exporters.export_readme(classes,'readme.md',category_colors)
 
 function copy_mapped_keys_to_target(target,object,definition)
     for arg_index, argument_docs in pairs(definition.arguments) do

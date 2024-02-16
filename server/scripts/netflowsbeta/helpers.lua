@@ -15,7 +15,7 @@ function listFilesByType(path, fileType)
       cmd = 'dir "' .. path .. '\\*.' .. fileType .. '" /b'
     else
       -- Unix-like command
-      cmd = 'find "' .. path .. '" -maxdepth  1 -type f -name "*.' .. fileType .. '"'
+      cmd = 'find "' .. path .. '" -maxdepth  1 -type f -name "*.' .. fileType .. '" -exec basename {} \\;'
     end
   
     -- Execute the command and read the output line by line
