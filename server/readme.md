@@ -37,44 +37,44 @@ you could follow the steps download and run it as an example too.
 ## $${\color{#3cb44b}tile}$$
 supported nodes for tile objects placed on your map
 
-|    class     |          description          |                                   arguments                                   | handlers |
-|--------------|-------------------------------|-------------------------------------------------------------------------------|----------|
-| Custom Warp  | triggers when stepped on      | <pre><code class="language-c">on_custom_warp //object<br></code></pre>        |          |
-| Interactable | triggers when interacted with | <pre><code class="language-c">on_object_interaction //object<br></code></pre> |          |
+|    class     |          description          |                              arguments                               | handlers |
+|--------------|-------------------------------|----------------------------------------------------------------------|----------|
+| Interactable | triggers when interacted with | <pre><code class="language-c">on_object_interaction<br></code></pre> |          |
+| Custom Warp  | triggers when stepped on      | <pre><code class="language-c">on_custom_warp<br></code></pre>        |          |
 
 ## $${\color{#ffe119}dialogue}$$
 dialogue related nodes
 
-|     class      |                       description                       |                                                                     arguments                                                                     | handlers |
-|----------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| message_player | Send a textbox to player, _next after textbox is closed | <pre><code class="language-c">player_id //string<br>message //string<br>mug_texture_path //string<br>mug_animation_path //string<br></code></pre> |          |
+|     class      |                       description                       |                                                   arguments                                                   | handlers |
+|----------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|----------|
+| message_player | Send a textbox to player, _next after textbox is closed | <pre><code class="language-c">player_id<br>message<br>mug_texture_path<br>mug_animation_path<br></code></pre> |          |
 
 ## $${\color{#911eb4}player}$$
 player related nodes
 
-|      class      |              description               |                                                                                arguments                                                                                | handlers |
-|-----------------|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| transfer_player | Transfer player to a location on a map | <pre><code class="language-c">player_id //string<br>area_id //string<br>warp_in //boolean<br>x //float<br>y //float<br>z //float<br>direction //string<br></code></pre> |          |
+|      class      |              description               |                                                 arguments                                                  | handlers |
+|-----------------|----------------------------------------|------------------------------------------------------------------------------------------------------------|----------|
+| transfer_player | Transfer player to a location on a map | <pre><code class="language-c">player_id<br>area_id<br>warp_in<br>x<br>y<br>z<br>direction<br></code></pre> |          |
 
-## $${\color{#f58231}bot}$$
+## $${\color{#4363d8}bot}$$
 bot related nodes
 
-|   class    | description  |                          arguments                          |                                   handlers                                   |
-|------------|--------------|-------------------------------------------------------------|------------------------------------------------------------------------------|
-| create_bot | Create a bot | <pre><code class="language-c">bot //object<br></code></pre> | <pre><code class="language-c">on_actor_interaction //object<br></code></pre> |
+|   class    | description  |                     arguments                      |                              handlers                               |
+|------------|--------------|----------------------------------------------------|---------------------------------------------------------------------|
+| create_bot | Create a bot | <pre><code class="language-c">bot<br></code></pre> | <pre><code class="language-c">on_actor_interaction<br></code></pre> |
 
 ## $${\color{#e6194B}trigger}$$
 nodes which start flows when an event happens on the server
 
-|          class          |                  description                  |                                    arguments                                    | handlers |
-|-------------------------|-----------------------------------------------|---------------------------------------------------------------------------------|----------|
-| on_actor_interaction    | triggers when a player interacts with a actor | <pre><code class="language-c">on_actor_interaction //object<br></code></pre>    |          |
-| on_player_area_transfer | triggers when a player transfers area         | <pre><code class="language-c">on_player_area_transfer //object<br></code></pre> |          |
+|          class          |                  description                  |                               arguments                                | handlers |
+|-------------------------|-----------------------------------------------|------------------------------------------------------------------------|----------|
+| on_actor_interaction    | triggers when a player interacts with a actor | <pre><code class="language-c">on_actor_interaction<br></code></pre>    |          |
+| on_player_area_transfer | triggers when a player transfers area         | <pre><code class="language-c">on_player_area_transfer<br></code></pre> |          |
 
-## $${\color{#4363d8}data}$$
+## $${\color{#f58231}data}$$
 nodes which store data, sometimes required by other nodes.
 
-|    class    |   description   |                                                                                                                            arguments                                                                                                                            | handlers |
-|-------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| bot_details | describes a bot | <pre><code class="language-c">area_id //string<br>warp_in //boolean<br>texture_path //string<br>animation_path //string<br>animation //string<br>x //float<br>y //float<br>z //float<br>direction //string<br>solid //boolean<br>name //string<br></code></pre> |          |
+|    class    |   description   |                                                                           arguments                                                                           | handlers |
+|-------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| bot_details | describes a bot | <pre><code class="language-c">area_id<br>warp_in<br>texture_path<br>animation_path<br>animation<br>x<br>y<br>z<br>direction<br>solid<br>name<br></code></pre> |          |
 

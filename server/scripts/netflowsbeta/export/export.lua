@@ -68,7 +68,7 @@ local function document_parameters(collection)
     if collection then
         parameters = parameters..'<pre><code class="language-c">'
         for i, arg in ipairs(collection) do
-            local arg_text = arg.name..' //'..arg.type
+            local arg_text = arg.name
             parameters = parameters..arg_text..'<br>'
         end
         parameters = parameters..'</code></pre>'
