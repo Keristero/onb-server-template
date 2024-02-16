@@ -139,3 +139,17 @@ function netflow(previous_node,context,node_id)
         return netflow(current_node,context)
     end)
 end
+
+--on load
+local areas = Net.list_areas()
+for _, area_id in ipairs(areas) do
+    local triggers = NetCached.get_cached_objects_by_class(area_id,'on_server_start')
+    print(triggers)
+    for key, object in pairs(triggers) do
+        local context = {
+            area_id = area_id,
+        }
+        local next_node_id = object.custom_properties.on_server_start
+        netflow(object,context,next_node_id)
+    end
+end

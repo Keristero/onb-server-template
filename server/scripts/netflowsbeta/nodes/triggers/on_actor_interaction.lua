@@ -1,5 +1,4 @@
 Net:on("actor_interaction", function(event)
-    print('actor_interaction')
     local player_area = Net.get_player_area(event.player_id)
     local triggers = NetCached.get_cached_objects_by_class(player_area,'actor_interaction')
     for key, object in pairs(triggers) do
@@ -19,7 +18,7 @@ return {
     global_object = '',
     description = 'triggers when a player interacts with a actor',
     category = 'trigger',
-    arguments = {
+    handlers = {
         [1]={
             name='on_actor_interaction',
             type='object'

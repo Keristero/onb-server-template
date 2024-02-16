@@ -16,7 +16,7 @@ return {
     global_object = '',
     description = 'triggers when a player transfers area',
     category = 'trigger',
-    arguments = {
+    handlers = {
         [1]={
             name='on_player_area_transfer',
             type='object'

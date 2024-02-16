@@ -24,6 +24,8 @@ return {
                 --remember to remove this when we remove the bot
                 print('created bot, added handler',context)
                 Net:on("actor_interaction", function(event)
+                    context.player_id = event.player_id
+                    context.button = event.button
                     print('this is the bots handler',context.bot_id)
                     if event.actor_id == context.bot_id then
                         local next_node_id = current_node.custom_properties.on_actor_interaction

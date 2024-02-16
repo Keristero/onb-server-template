@@ -1,80 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="30" height="20" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="24">
- <tileset firstgid="1" source="../assets/tiles/floor.tsx"/>
- <tileset firstgid="4" source="../assets/tiles/home_warp.tsx"/>
- <tileset firstgid="9" source="../assets/tiles/coffee.tsx"/>
- <tileset firstgid="13" source="../assets/ezlibs-assets/ezcheckpoints/bn5cubegreen_tile.tsx"/>
- <tileset firstgid="17" source="../assets/objects/warp.tsx"/>
- <layer id="1" name="Tile Layer 1" width="30" height="20">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="20">
+ <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
+ <tileset firstgid="25" source="../assets/objects/home_warp.tsx"/>
+ <tileset firstgid="30" source="../assets/objects/coffee.tsx"/>
+ <tileset firstgid="34" source="../assets/objects/dish.tsx"/>
+ <layer id="1" name="Tile Layer 1" class="Home Warp" width="40" height="40" opacity="0.9">
+  <properties>
+   <property name="Direction" value="Down"/>
+  </properties>
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,7,7,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,7,7,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,7,7,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,23,23,23,11,11,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,23,23,23,11,11,11,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,23,23,23,11,11,11,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
  <objectgroup id="2" name="Object Layer 1">
-  <object id="1" type="Home Warp" gid="4" x="257" y="257" width="60" height="32">
+  <object id="1" type="Home Warp" gid="25" x="448" y="640" width="60" height="32">
    <properties>
-    <property name="Direction" value="Down Right"/>
+    <property name="Direction" propertytype="Direction" value="Down"/>
    </properties>
   </object>
-  <object id="2" gid="9" x="369" y="209" width="33" height="54"/>
-  <object id="5" name="netflow test" type="Custom Warp" gid="18" x="351.5" y="256.5" width="61" height="32">
+  <object id="3" type="create_bot" x="328" y="488">
    <properties>
-    <property name="on_custom_warp" type="object" value="6"/>
-   </properties>
-  </object>
-  <object id="6" type="transfer_player" x="304" y="192">
-   <properties>
-    <property name="_target_object" type="object" value="7"/>
-    <property name="_then" type="object" value="0"/>
+    <property name="_then" type="object" value="19"/>
+    <property name="bot" type="object" value="6"/>
+    <property name="on_actor_interaction" type="object" value="7"/>
    </properties>
    <point/>
   </object>
-  <object id="7" gid="18" x="384" y="160" width="61" height="32"/>
-  <object id="11" type="create_bot" x="240" y="200">
-   <properties>
-    <property name="bot" type="object" value="17"/>
-    <property name="on_actor_interaction" type="object" value="19"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="12" type="message_player" x="184" y="80">
-   <properties>
-    <property name="_then" type="object" value="0"/>
-    <property name="message" value="Nice warp!"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="13" type="on_player_area_transfer" x="128" y="96">
-   <properties>
-    <property name="on_player_area_transfer" type="object" value="12"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="14" type="Interactable" gid="9" x="240" y="240" width="33" height="54">
-   <properties>
-    <property name="on_object_interaction" type="object" value="11"/>
-   </properties>
-  </object>
-  <object id="17" type="bot_details" x="344" y="312">
+  <object id="6" type="bot_details" x="400" y="464">
    <properties>
     <property name="animation_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/prog.animation"/>
     <property name="name" value="prog"/>
@@ -82,42 +73,51 @@
    </properties>
    <point/>
   </object>
-  <object id="19" type="message_player" x="240" y="160">
+  <object id="7" type="message_player" x="336" y="456">
    <properties>
-    <property name="_then" type="object" value="20"/>
-    <property name="message" value="Wow, it actually worked!"/>
+    <property name="message" value="PROGGERS"/>
     <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
     <property name="mug_texture_path" value="/server/assets/ezlibs-assets/eznpcs/mug/prog.png"/>
    </properties>
    <point/>
   </object>
-  <object id="20" type="question_player" x="248" y="136">
+  <object id="12" type="Interactable" gid="30" x="464" y="720" width="33" height="54">
    <properties>
-    <property name="_then" type="object" value="0"/>
-    <property name="on_no" type="object" value="22"/>
-    <property name="on_yes" type="object" value="21"/>
-    <property name="question" value="ya like jazz?"/>
+    <property name="on_object_interaction" type="object" value="13"/>
+   </properties>
+  </object>
+  <object id="13" type="message_player" x="432" y="760">
+   <properties>
+    <property name="message" value="...You cant read it standing this close"/>
    </properties>
    <point/>
   </object>
-  <object id="21" type="message_player" x="232" y="88">
+  <object id="14" type="Interactable" gid="34" x="432" y="528" width="58" height="85">
    <properties>
-    <property name="_then" type="object" value="0"/>
-    <property name="message" value="thats cool"/>
+    <property name="on_object_interaction" type="object" value="3"/>
+   </properties>
+  </object>
+  <object id="15" type="on_server_start" x="320" y="552">
+   <properties>
+    <property name="_then" type="object" value="3"/>
    </properties>
    <point/>
   </object>
-  <object id="22" type="message_player" x="264" y="104">
+  <object id="17" type="on_server_start" x="264" y="496">
    <properties>
-    <property name="_then" type="object" value="23"/>
-    <property name="message" value="thats a shame..."/>
+    <property name="_then" type="object" value="18"/>
    </properties>
    <point/>
   </object>
-  <object id="23" type="kick_player" x="264" y="72">
+  <object id="18" type="set_song" x="280" y="480">
    <properties>
-    <property name="_then" type="object" value="0"/>
-    <property name="reason" value="being lame"/>
+    <property name="song_path" value="/server/assets/music/boundless-network.ogg"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="19" type="play_sound" x="304" y="448">
+   <properties>
+    <property name="path" value="/server/assets/sfx/area_grab.ogg"/>
    </properties>
    <point/>
   </object>

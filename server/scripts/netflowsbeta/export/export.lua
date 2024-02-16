@@ -29,26 +29,30 @@ local readme_layout = {
         read_from_file="./scripts/netflowsbeta/readme_template/readme_header.md"
     },
     [2]={
+        nodes_of_category="area",
+        short_description='nodes that affect the map'
+    },
+    [3]={
         nodes_of_category="tile",
         short_description='supported nodes for tile objects placed on your map'
     },
-    [3]={
+    [4]={
         nodes_of_category='dialogue',
         short_description='dialogue related nodes'
     },
-    [4]={
+    [5]={
         nodes_of_category="player",
         short_description='player related nodes'
     },
-    [5]={
+    [6]={
         nodes_of_category="bot",
         short_description='bot related nodes'
     },
-    [6]={
+    [7]={
         nodes_of_category="trigger",
         short_description='nodes which start flows when an event happens on the server'
     },
-    [7]={
+    [8]={
         nodes_of_category="data",
         short_description='nodes which store data, sometimes required by other nodes.'
     }
