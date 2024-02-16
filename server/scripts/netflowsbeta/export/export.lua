@@ -76,6 +76,16 @@ local function document_parameters(collection)
     return parameters
 end
 
+local function document_return(return_doc)
+    local parameters = ''
+    if return_doc then
+        parameters = parameters..'<pre>'
+        parameters = parameters..return_doc.name..'<br>'
+        parameters = parameters..'</pre>'
+    end
+    return parameters
+end
+
 exporters.export_readme = function(nodes,readme_path,category_colors)
     return async(function ()
         local txt = ""
@@ -95,22 +105,16 @@ exporters.export_readme = function(nodes,readme_path,category_colors)
             if section.nodes_of_category then
                 local section_text = '## $${\\color{'..category_colors[section.nodes_of_category]..'}'..section.nodes_of_category..'}$$\n'
                 --now generate a table, for example:
-                local headings = {"class", "description", "arguments", "handlers"}
+                local headings = {"class", "description", "arguments", "handlers","output"}
                 local rows = {}
-
-                -- generate the table. Last argument are the options, or if a string, the style option
-                local table_out = table_gen(rows, headings, {
-                    style = "Markdown (Github)"
-                })
                 
                 section_text = section_text..''..section.short_description..'\n\n'
 
                 for name, node_def in pairs(category[section.nodes_of_category]) do
-                    local row = {node_def.function_name,node_def.description,document_parameters(node_def.arguments),document_parameters(node_def.handlers)}
+                    local row = {node_def.function_name,node_def.description,document_parameters(node_def.arguments),document_parameters(node_def.handlers),document_return(node_def.return_value)}
                     table.insert(rows,row)
                 end
 
-                print(rows)
                 local table_string = table_gen(rows, headings, {
                     style = "Markdown (Github)"
                 })

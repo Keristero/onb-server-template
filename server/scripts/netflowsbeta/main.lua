@@ -109,33 +109,33 @@ function execute_action(object,context,definition)
 end
 
 function netflow(previous_node,context,node_id)
-    print('netflow',context,node_id)
-    local current_node_id = node_id or previous_node.custom_properties._then
-    if not current_node_id then
-        --no node to flow to
-        return
-    end
-    --find the node
-    local current_node = NetCached.get_object_by_id(context.area_id, current_node_id)
-    print('thenode=',current_node)
-    if not current_node then
-        return
-    end
-    --find a function for it
-    local function_definition = classes[current_node.class]
-    if function_definition then
-        --run the function
-        execute_action(current_node,context,function_definition)
-    end
-    --initialize the handlers
-    if function_definition.handlers then
-        print('woah, there are handlers',function_definition.handlers)
-        for key, handler in pairs(function_definition.handlers) do
-            if handler.setup then
-                handler.setup(current_node,context)
+    --print('netflow',context,node_id)
+    return async(function ()
+        local current_node_id = node_id or previous_node.custom_properties._then
+        if not current_node_id then
+            --no node to flow to
+            return
+        end
+        --find the node
+        local current_node = NetCached.get_object_by_id(context.area_id, current_node_id)
+        if not current_node then
+            return
+        end
+        --find a function for it
+        local function_definition = classes[current_node.class]
+        if function_definition then
+            --run the function
+            await(execute_action(current_node,context,function_definition))
+        end
+        --initialize the handlers
+        if function_definition.handlers then
+            for key, handler in pairs(function_definition.handlers) do
+                if handler.setup then
+                    handler.setup(current_node,context)
+                end
             end
         end
-    end
 
-    return netflow(current_node,context)
+        return netflow(current_node,context)
+    end)
 end
