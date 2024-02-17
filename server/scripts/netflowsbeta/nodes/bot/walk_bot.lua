@@ -1,8 +1,6 @@
 return {
-    function_name = 'walk_bot',
     global_object = 'Async',
     description = 'walk bot to location',
-    category = 'bot',
     override_func = function (node,context)
         return async(function ()
             local wait_time = 0.05

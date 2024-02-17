@@ -1,8 +1,6 @@
 return {
-    function_name = 'remove_bot',
     global_object = 'Net',
     description = 'Remove a bot',
-    category = 'bot',
     arguments = {
         [1]={
             name='bot_id',

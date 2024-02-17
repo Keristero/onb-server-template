@@ -1,8 +1,6 @@
 return {
-    function_name = 'message_player',
     global_object = 'Async',
     description = 'Send a textbox to player, _next after textbox is closed',
-    category = 'dialogue',
     arguments = {
         [1]={
             name='player_id',

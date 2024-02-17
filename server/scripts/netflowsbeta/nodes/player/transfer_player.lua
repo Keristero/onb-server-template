@@ -1,8 +1,6 @@
 return {
-    function_name = 'transfer_player',
     global_object = 'Net',
     description = 'Transfer player to a location on a map',
-    category = 'player',
     arguments = {
         [1]={
             name='player_id',

@@ -1,8 +1,6 @@
 return {
-    function_name = 'all',
     global_object = 'Net',
     description = 'Do all the things',
-    category = 'flow',
     override_func = function (node,context)
         return
     end,

@@ -1,10 +1,8 @@
 
 
 return {
-    function_name = 'bot_details',
     global_object = '',
     description = 'describes a bot',
-    category = 'data',
     arguments = {
         [1]={
             name='area_id',

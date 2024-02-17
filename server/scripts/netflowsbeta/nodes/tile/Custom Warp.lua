@@ -16,9 +16,7 @@ Net:on("custom_warp", function(event)
 end)
 
 return {
-    function_name = 'Custom Warp',
     description = 'triggers when stepped on',
-    category = 'tile',
     arguments = {
         [1]={
             name='on_custom_warp',

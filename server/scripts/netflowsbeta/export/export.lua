@@ -19,6 +19,20 @@ local hardcoded_enums = {
             "Down Right"
         },
         valuesAsFlags=false
+    },
+    {
+        name='console_color',
+        storageType='string',
+        type='enum',
+        values={
+            "red",
+            "green",
+            "yellow",
+            "blue",
+            "magenta",
+            "cyan"
+        },
+        valuesAsFlags=false
     }
 }
 
@@ -63,6 +77,10 @@ local readme_layout = {
     [10]={
         nodes_of_category="trigger",
         short_description='used for beginning flows from server events'
+    },
+    [11]={
+        nodes_of_category="object",
+        short_description='interacting with objects'
     }
 }
 

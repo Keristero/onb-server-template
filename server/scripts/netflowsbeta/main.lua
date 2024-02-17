@@ -18,7 +18,8 @@ local node_script_folders = {
     'misc',
     'player',
     'tile',
-    'trigger'
+    'trigger',
+    'object'
 }
 --actually require the scripts
 for index, category_folder in ipairs(node_script_folders) do
@@ -26,8 +27,9 @@ for index, category_folder in ipairs(node_script_folders) do
     for index, file_name in ipairs(files) do
         local script_name = getFirstPart(file_name)
         local class_definition = require(nodes_folder_path..category_folder..'/'..script_name)
-        --set the category
+        --set the category and function name, from the folder and filename
         class_definition.category = category_folder
+        class_definition.function_name = script_name
         classes[script_name] = class_definition
     end
 end

@@ -17,9 +17,7 @@ Net:on("object_interaction", function(event)
 end)
 
 return {
-    function_name = 'Interactable',
     description = 'triggers when interacted with',
-    category = 'tile',
     arguments = {
         [1]={
             name='on_object_interaction',

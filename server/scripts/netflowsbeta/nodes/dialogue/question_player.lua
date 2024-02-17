@@ -1,8 +1,6 @@
 return {
-    function_name = 'question_player',
     global_object = 'Async',
     description = 'Send a question to player, _next after answer',
-    category = 'dialogue',
     return_value = {
         name='question_answer',
         type='int'

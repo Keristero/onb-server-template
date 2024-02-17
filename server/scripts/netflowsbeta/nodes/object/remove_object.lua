@@ -1,14 +1,14 @@
 return {
     global_object = 'Net',
-    description = 'Play sound for everyone in a map',
+    description = 'remove an object',
     arguments = {
         [1]={
             name='area_id',
             type='string'
         },
         [2]={
-            name='path',
-            type='string'
+            name='object_id',
+            type='object'
         }
     }
 }

@@ -1,8 +1,6 @@
 return {
-    function_name = 'move_bot',
     global_object = 'Net',
     description = 'set bot position',
-    category = 'bot',
     arguments = {
         [1]={
             name='bot_id',

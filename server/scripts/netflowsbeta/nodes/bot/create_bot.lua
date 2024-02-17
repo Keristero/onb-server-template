@@ -1,8 +1,6 @@
 return {
-    function_name = 'create_bot',
     global_object = 'Net',
     description = 'Create a bot',
-    category = 'bot',
     return_value = {
         name='bot_id',
         type='string'
