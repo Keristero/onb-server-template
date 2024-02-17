@@ -7,10 +7,15 @@ local classes = {}
 --dynamic imports
 --require all scripts from these folders
 local node_script_folders = {
-    'scripts/netflowsbeta/properties',
-    'scripts/netflowsbeta/nodes/actions',
-    'scripts/netflowsbeta/nodes/triggers',
-    'scripts/netflowsbeta/tiles'
+    'scripts/netflowsbeta/nodes/area',
+    'scripts/netflowsbeta/nodes/bot',
+    'scripts/netflowsbeta/nodes/data',
+    'scripts/netflowsbeta/nodes/dialogue',
+    'scripts/netflowsbeta/nodes/flow',
+    'scripts/netflowsbeta/nodes/misc',
+    'scripts/netflowsbeta/nodes/player',
+    'scripts/netflowsbeta/nodes/tile',
+    'scripts/netflowsbeta/nodes/trigger'
 }
 --actually require the scripts
 for index, folder_path in ipairs(node_script_folders) do
@@ -45,6 +50,9 @@ function copy_mapped_keys_to_target(target,object,definition)
 end
 
 function load_context(object,context,definition)
+    if not definition.arguments then
+        return
+    end
     copy_mapped_keys_to_target(context,object,definition)
     local target_object_id = object.custom_properties._target_object
     if target_object_id then
@@ -66,11 +74,16 @@ end
 
 function copy_arguments_from_context(context,arguments,ignore_missing,use_real_names)
     local arg_table = {}
+    if arguments == nil then
+        return arg_table
+    end
     for index, _ in ipairs(arguments) do
         local argument_docs = arguments[index]
-        print('copying',argument_docs.name)
         if not argument_docs.copy_from_target then
             local value = context[argument_docs.name]
+            if argument_docs.type == "float" or argument_docs.type == "int" then
+                value = tonumber(value)
+            end
             if not value then
                 if argument_docs.default == nil and not ignore_missing then
                     error('mandatory argument missing ('..argument_docs.name..')!')
@@ -94,13 +107,20 @@ function execute_action(object,context,definition)
     return async(function ()
         load_context(object,context,definition)
         local args = copy_arguments_from_context(context,definition.arguments)
-        print('calling global func',definition.function_name,args)
         local target_function = _ENV[definition.global_object][definition.function_name]
         local result
         if definition.global_object == "Async" then
-            result = await(target_function(table.unpack(args)))
+            if definition.override_func then
+                result = await(definition.override_func(object,context))
+            else
+                result = await(target_function(table.unpack(args)))
+            end
         else
-            result = target_function(table.unpack(args))
+            if definition.override_func then
+                result = definition.override_func(object,context)
+            else
+                result = target_function(table.unpack(args))
+            end
         end
         if definition.return_value then
             context[definition.return_value.name] = result
@@ -109,15 +129,32 @@ function execute_action(object,context,definition)
 end
 
 function netflow(previous_node,context,node_id)
-    --print('netflow',context,node_id)
     return async(function ()
+        --first make a new context object, so that we dont run into weird issues
+        local new_context = {}
+        for key, value in pairs(context) do
+            new_context[key] = value
+        end
+        --do the before action, if it exists
+        local before_node_id = previous_node.custom_properties._before
+        if before_node_id then
+            --find the node
+            local before_node = NetCached.get_object_by_id(new_context.area_id, before_node_id)
+            --find a function for it
+            local function_definition = classes[before_node.class]
+            if function_definition then
+                --run the function
+                await(execute_action(before_node,new_context,function_definition))
+            end
+        end
+        --do the next action
         local current_node_id = node_id or previous_node.custom_properties._then
         if not current_node_id then
             --no node to flow to
             return
         end
         --find the node
-        local current_node = NetCached.get_object_by_id(context.area_id, current_node_id)
+        local current_node = NetCached.get_object_by_id(new_context.area_id, current_node_id)
         if not current_node then
             return
         end
@@ -125,31 +162,33 @@ function netflow(previous_node,context,node_id)
         local function_definition = classes[current_node.class]
         if function_definition then
             --run the function
-            await(execute_action(current_node,context,function_definition))
+            await(execute_action(current_node,new_context,function_definition))
+        end
+        --always run this if it is present
+        if function_definition.after_execute_func then
+            function_definition.after_execute_func(current_node,new_context)
         end
         --initialize the handlers
         if function_definition.handlers then
             for key, handler in pairs(function_definition.handlers) do
                 if handler.setup then
-                    handler.setup(current_node,context)
+                    handler.setup(current_node,new_context)
                 end
             end
         end
 
-        return netflow(current_node,context)
+        return netflow(current_node,new_context)
     end)
 end
 
 --on load
 local areas = Net.list_areas()
 for _, area_id in ipairs(areas) do
-    local triggers = NetCached.get_cached_objects_by_class(area_id,'on_server_start')
-    print(triggers)
+    local triggers = NetCached.get_cached_objects_by_class(area_id,'on_start')
     for key, object in pairs(triggers) do
         local context = {
             area_id = area_id,
         }
-        local next_node_id = object.custom_properties.on_server_start
-        netflow(object,context,next_node_id)
+        netflow(object,context)
     end
 end

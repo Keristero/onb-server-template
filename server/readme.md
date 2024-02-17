@@ -42,13 +42,22 @@ nodes that affect the map
 | set_song   | Set the background music for a map | <pre>area_id<br>song_path<br></pre> |          |        |
 | play_sound | Play sound for everyone in a map   | <pre>area_id<br>path<br></pre>      |          |        |
 
-## $${\color{#3cb44b}tile}$$
-supported nodes for tile objects placed on your map
+## $${\color{#bfef45}bot}$$
+bot nodes
 
-|    class     |          description          |              arguments               | handlers | output |
-|--------------|-------------------------------|--------------------------------------|----------|--------|
-| Custom Warp  | triggers when stepped on      | <pre>on_custom_warp<br></pre>        |          |        |
-| Interactable | triggers when interacted with | <pre>on_object_interaction<br></pre> |          |        |
+|   class    |     description      |              arguments               |              handlers               |        output         |
+|------------|----------------------|--------------------------------------|-------------------------------------|-----------------------|
+| move_bot   | set bot position     | <pre>bot_id<br>x<br>y<br>z<br></pre> |                                     |                       |
+| create_bot | Create a bot         | <pre>bot<br></pre>                   | <pre>on_actor_interaction<br></pre> | <pre>bot_id<br></pre> |
+| walk_bot   | walk bot to location | <pre>bot_id<br>x<br>y<br>z<br></pre> |                                     |                       |
+| remove_bot | Remove a bot         | <pre>bot_id<br>warp_out<br></pre>    |                                     |                       |
+
+## $${\color{#4363d8}data}$$
+data storage nodes, often referenced by other nodes
+
+|    class    |   description   |                                                           arguments                                                           | handlers | output |
+|-------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------|----------|--------|
+| bot_details | describes a bot | <pre>area_id<br>warp_in<br>texture_path<br>animation_path<br>animation<br>x<br>y<br>z<br>direction<br>solid<br>name<br></pre> |          |        |
 
 ## $${\color{#f58231}dialogue}$$
 dialogue related nodes
@@ -58,34 +67,43 @@ dialogue related nodes
 | question_player | Send a question to player, _next after answer           | <pre>player_id<br>question<br>mug_texture_path<br>mug_animation_path<br></pre> | <pre>on_yes<br>on_no<br></pre> | <pre>question_answer<br></pre> |
 | message_player  | Send a textbox to player, _next after textbox is closed | <pre>player_id<br>message<br>mug_texture_path<br>mug_animation_path<br></pre>  |                                |                                |
 
-## $${\color{#ffe119}player}$$
+## $${\color{#ffe119}flow}$$
+flow control nodes
+
+| class |     description     |        arguments        |       handlers       | output |
+|-------|---------------------|-------------------------|----------------------|--------|
+| all   | Do all the things   |                         | <pre>next2<br></pre> |        |
+| sleep | Sleep for x seconds | <pre>duration<br></pre> |                      |        |
+
+## $${\color{#3cb44b}misc}$$
+various other nodes, for debugging etc
+
+| class |           description            |                         arguments                         | handlers | output |
+|-------|----------------------------------|-----------------------------------------------------------|----------|--------|
+| print | print some values to the console | <pre>print_label<br>print_context<br>print_node<br></pre> |          |        |
+
+## $${\color{#911eb4}player}$$
 player related nodes
 
 |      class      |              description               |                                 arguments                                  | handlers | output |
 |-----------------|----------------------------------------|----------------------------------------------------------------------------|----------|--------|
-| transfer_player | Transfer player to a location on a map | <pre>player_id<br>area_id<br>warp_in<br>x<br>y<br>z<br>direction<br></pre> |          |        |
 | kick_player     | Kick player from server                | <pre>player_id<br>reason<br>warp_out<br></pre>                             |          |        |
+| transfer_player | Transfer player to a location on a map | <pre>player_id<br>area_id<br>warp_in<br>x<br>y<br>z<br>direction<br></pre> |          |        |
 
-## $${\color{#e6194B}bot}$$
-bot related nodes
+## $${\color{#e6194B}tile}$$
+nodes that the player actually interacts with on the map, all other types are removed from the map on boot.
 
-|   class    | description  |     arguments      |              handlers               |        output         |
-|------------|--------------|--------------------|-------------------------------------|-----------------------|
-| create_bot | Create a bot | <pre>bot<br></pre> | <pre>on_actor_interaction<br></pre> | <pre>bot_id<br></pre> |
+|    class     |          description          |              arguments               | handlers | output |
+|--------------|-------------------------------|--------------------------------------|----------|--------|
+| Interactable | triggers when interacted with | <pre>on_object_interaction<br></pre> |          |        |
+| Custom Warp  | triggers when stepped on      | <pre>on_custom_warp<br></pre>        |          |        |
 
-## $${\color{#911eb4}trigger}$$
-nodes which start flows when an event happens on the server
+## $${\color{#f032e6}trigger}$$
+used for beginning flows from server events
 
-|          class          |                  description                  | arguments |                handlers                | output |
-|-------------------------|-----------------------------------------------|-----------|----------------------------------------|--------|
-| on_server_start         | triggers immediately                          |           |                                        |        |
-| on_actor_interaction    | triggers when a player interacts with a actor |           | <pre>on_actor_interaction<br></pre>    |        |
-| on_player_area_transfer | triggers when a player transfers area         |           | <pre>on_player_area_transfer<br></pre> |        |
-
-## $${\color{#4363d8}data}$$
-nodes which store data, sometimes required by other nodes.
-
-|    class    |   description   |                                                           arguments                                                           | handlers | output |
-|-------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------|----------|--------|
-| bot_details | describes a bot | <pre>area_id<br>warp_in<br>texture_path<br>animation_path<br>animation<br>x<br>y<br>z<br>direction<br>solid<br>name<br></pre> |          |        |
+|          class          |                      description                      | arguments |                handlers                | output |
+|-------------------------|-------------------------------------------------------|-----------|----------------------------------------|--------|
+| on_start                | triggers immediately once the plugin finishes loading |           |                                        |        |
+| on_actor_interaction    | triggers when a player interacts with a actor         |           | <pre>on_actor_interaction<br></pre>    |        |
+| on_player_area_transfer | triggers when a player transfers area                 |           | <pre>on_player_area_transfer<br></pre> |        |
 

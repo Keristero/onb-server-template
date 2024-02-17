@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="20">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="40">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/home_warp.tsx"/>
  <tileset firstgid="30" source="../assets/objects/coffee.tsx"/>
@@ -57,15 +57,16 @@
     <property name="Direction" propertytype="Direction" value="Down"/>
    </properties>
   </object>
-  <object id="3" type="create_bot" x="328" y="488">
+  <object id="3" name="create bot" type="create_bot" x="232" y="424">
    <properties>
-    <property name="_then" type="object" value="19"/>
+    <property name="_then" type="object" value="20"/>
     <property name="bot" type="object" value="6"/>
     <property name="on_actor_interaction" type="object" value="7"/>
+    <property name="starting_waypoint" type="object" value="20"/>
    </properties>
    <point/>
   </object>
-  <object id="6" type="bot_details" x="400" y="464">
+  <object id="6" name="bot details" type="bot_details" x="192" y="408">
    <properties>
     <property name="animation_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/prog.animation"/>
     <property name="name" value="prog"/>
@@ -73,8 +74,9 @@
    </properties>
    <point/>
   </object>
-  <object id="7" type="message_player" x="336" y="456">
+  <object id="7" name="message player" type="message_player" x="208" y="384">
    <properties>
+    <property name="_then" type="object" value="0"/>
     <property name="message" value="PROGGERS"/>
     <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
     <property name="mug_texture_path" value="/server/assets/ezlibs-assets/eznpcs/mug/prog.png"/>
@@ -88,36 +90,130 @@
   </object>
   <object id="13" type="message_player" x="432" y="760">
    <properties>
+    <property name="_before" type="object" value="29"/>
+    <property name="_then" type="object" value="30"/>
     <property name="message" value="...You cant read it standing this close"/>
    </properties>
    <point/>
   </object>
-  <object id="14" type="Interactable" gid="34" x="432" y="528" width="58" height="85">
+  <object id="14" name="bot spawner" type="Interactable" gid="34" x="432" y="528" width="58" height="85">
    <properties>
-    <property name="on_object_interaction" type="object" value="3"/>
+    <property name="on_object_interaction" type="object" value="38"/>
    </properties>
   </object>
-  <object id="15" type="on_server_start" x="320" y="552">
-   <properties>
-    <property name="_then" type="object" value="3"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="17" type="on_server_start" x="264" y="496">
+  <object id="17" type="on_start" x="280" y="536">
    <properties>
     <property name="_then" type="object" value="18"/>
    </properties>
    <point/>
   </object>
-  <object id="18" type="set_song" x="280" y="480">
+  <object id="18" type="set_song" x="304" y="536">
    <properties>
+    <property name="_then" type="object" value="39"/>
     <property name="song_path" value="/server/assets/music/boundless-network.ogg"/>
    </properties>
    <point/>
   </object>
-  <object id="19" type="play_sound" x="304" y="448">
+  <object id="19" name="play sound" type="play_sound" x="472" y="600">
    <properties>
     <property name="path" value="/server/assets/sfx/area_grab.ogg"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="20" name="move bot" type="move_bot" x="368" y="464">
+   <properties>
+    <property name="_then" type="object" value="22"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="22" name="walk bot" type="walk_bot" x="464" y="464">
+   <properties>
+    <property name="_then" type="object" value="23"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="23" name="walk bot" type="walk_bot" x="464" y="528">
+   <properties>
+    <property name="_then" type="object" value="24"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="24" name="walk bot" type="walk_bot" x="496" y="528">
+   <properties>
+    <property name="_then" type="object" value="25"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="25" name="walk bot" type="walk_bot" x="496" y="464">
+   <properties>
+    <property name="_before" type="object" value="31"/>
+    <property name="_then" type="object" value="26"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="26" name="walk bot" type="walk_bot" x="560" y="464">
+   <properties>
+    <property name="_then" type="object" value="32"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="29" type="sleep" x="440" y="792">
+   <properties>
+    <property name="duration" type="float" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="30" type="message_player" x="488" y="784">
+   <properties>
+    <property name="message" value="I waited"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="31" name="sleep" type="sleep" x="480" y="400">
+   <properties>
+    <property name="duration" type="float" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="32" name="remove bot" type="remove_bot" x="616" y="464">
+   <properties>
+    <property name="_then" type="object" value="19"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="33" name="sleep" type="sleep" x="352" y="352">
+   <properties>
+    <property name="_then" type="object" value="37"/>
+    <property name="duration" type="float" value="7"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="35" name="on start" type="on_start" x="280" y="352">
+   <properties>
+    <property name="_then" type="object" value="37"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="37" name="all" type="all" x="328" y="400">
+   <properties>
+    <property name="_then" type="object" value="38"/>
+    <property name="next2" type="object" value="33"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="38" name="all" type="all" x="288" y="480">
+   <properties>
+    <property name="_then" type="object" value="3"/>
+    <property name="next2" type="object" value="19"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="39" name="print" type="print" x="336" y="544">
+   <properties>
+    <property name="print_context" type="bool" value="true"/>
+    <property name="print_label" value="This is a debug print node output"/>
+    <property name="print_node" type="bool" value="true"/>
+    <property name="song_path" value="/server/assets/music/boundless-network.ogg"/>
    </properties>
    <point/>
   </object>

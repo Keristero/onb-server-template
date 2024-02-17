@@ -33,28 +33,36 @@ local readme_layout = {
         short_description='nodes that affect the map'
     },
     [3]={
-        nodes_of_category="tile",
-        short_description='supported nodes for tile objects placed on your map'
+        nodes_of_category="bot",
+        short_description='bot nodes'
     },
     [4]={
-        nodes_of_category='dialogue',
-        short_description='dialogue related nodes'
+        nodes_of_category='data',
+        short_description='data storage nodes, often referenced by other nodes'
     },
     [5]={
+        nodes_of_category="dialogue",
+        short_description='dialogue related nodes'
+    },
+    [6]={
+        nodes_of_category="flow",
+        short_description='flow control nodes'
+    },
+    [7]={
+        nodes_of_category="misc",
+        short_description='various other nodes, for debugging etc'
+    },
+    [8]={
         nodes_of_category="player",
         short_description='player related nodes'
     },
-    [6]={
-        nodes_of_category="bot",
-        short_description='bot related nodes'
+    [9]={
+        nodes_of_category="tile",
+        short_description='nodes that the player actually interacts with on the map, all other types are removed from the map on boot.'
     },
-    [7]={
+    [10]={
         nodes_of_category="trigger",
-        short_description='nodes which start flows when an event happens on the server'
-    },
-    [8]={
-        nodes_of_category="data",
-        short_description='nodes which store data, sometimes required by other nodes.'
+        short_description='used for beginning flows from server events'
     }
 }
 
@@ -165,13 +173,19 @@ exporters.export_tiled_types = function(nodes,project_path)
         }
         table.insert(new_type.members,new_arg)
 
+        local new_arg = {
+            name='_before',
+            type='object'
+        }
+        table.insert(new_type.members,new_arg)
+
         --populate members
         if doc.arguments then
             for index, arg_doc in ipairs(doc.arguments) do
                 local new_arg = {
                     name=arg_doc.name,
                     type=arg_doc.type,
-                    value=arg_doc.default or 0
+                    value=arg_doc.default
                 }
                 if arg_doc.propertyType then
                     new_arg.propertyType = arg_doc.propertyType
