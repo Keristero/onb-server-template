@@ -90,8 +90,6 @@
   </object>
   <object id="13" type="message_player" x="432" y="760">
    <properties>
-    <property name="_before" type="object" value="29"/>
-    <property name="_then" type="object" value="30"/>
     <property name="message" value="...You cant read it standing this close"/>
    </properties>
    <point/>
@@ -157,18 +155,6 @@
    </properties>
    <point/>
   </object>
-  <object id="29" type="sleep" x="440" y="792">
-   <properties>
-    <property name="duration" type="float" value="1"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="30" type="message_player" x="488" y="784">
-   <properties>
-    <property name="message" value="I waited"/>
-   </properties>
-   <point/>
-  </object>
   <object id="31" name="sleep" type="sleep" x="480" y="400">
    <properties>
     <property name="duration" type="float" value="1"/>
@@ -188,13 +174,13 @@
    </properties>
    <point/>
   </object>
-  <object id="35" name="on start" type="on_start" x="280" y="352">
+  <object id="35" name="on start" type="on_start" x="264" y="360">
    <properties>
     <property name="_then" type="object" value="37"/>
    </properties>
    <point/>
   </object>
-  <object id="37" name="all" type="all" x="328" y="400">
+  <object id="37" name="all" type="all" x="320" y="384">
    <properties>
     <property name="_then" type="object" value="38"/>
     <property name="next2" type="object" value="33"/>

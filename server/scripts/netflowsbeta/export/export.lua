@@ -162,6 +162,7 @@ exporters.export_tiled_types = function(nodes,project_path)
         }
         --pick a color
         if not category_colors[doc.category] then
+            print(doc.category)
             category_colors[doc.category] = table.remove(distinct_colors,  1)
         end
         new_type.color = category_colors[doc.category]

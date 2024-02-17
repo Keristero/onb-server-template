@@ -6,23 +6,28 @@ local classes = {}
 
 --dynamic imports
 --require all scripts from these folders
+
+local nodes_folder_path = 'scripts/netflowsbeta/nodes/'
+--folders for each category of node script
 local node_script_folders = {
-    'scripts/netflowsbeta/nodes/area',
-    'scripts/netflowsbeta/nodes/bot',
-    'scripts/netflowsbeta/nodes/data',
-    'scripts/netflowsbeta/nodes/dialogue',
-    'scripts/netflowsbeta/nodes/flow',
-    'scripts/netflowsbeta/nodes/misc',
-    'scripts/netflowsbeta/nodes/player',
-    'scripts/netflowsbeta/nodes/tile',
-    'scripts/netflowsbeta/nodes/trigger'
+    'area',
+    'bot',
+    'data',
+    'dialogue',
+    'flow',
+    'misc',
+    'player',
+    'tile',
+    'trigger'
 }
 --actually require the scripts
-for index, folder_path in ipairs(node_script_folders) do
-    local files = listFilesByType(folder_path,'lua')
+for index, category_folder in ipairs(node_script_folders) do
+    local files = listFilesByType(nodes_folder_path..category_folder,'lua')
     for index, file_name in ipairs(files) do
         local script_name = getFirstPart(file_name)
-        local class_definition = require(folder_path..'/'..script_name)
+        local class_definition = require(nodes_folder_path..category_folder..'/'..script_name)
+        --set the category
+        class_definition.category = category_folder
         classes[script_name] = class_definition
     end
 end
