@@ -14,6 +14,14 @@
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1683436961-%2Fserver%2Fassets%2Fobjects%2Fcoffee.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1708225914-%2Fserver%2Fassets%2Fdenim_b_tiles%2Fovernet-stairs-denim.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "C:/Users/Keris/Documents/Repos/ONB/net-city/areas/base_homepage.tmx": {
             "scale": 1,
             "selectedLayer": 1,
@@ -357,6 +365,8 @@
     "project": "server.tiled-project",
     "property.type": "object",
     "recentFiles": [
+        "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1683436961-%2Fserver%2Fassets%2Fobjects%2Fcoffee.tsx",
+        "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1708225914-%2Fserver%2Fassets%2Fdenim_b_tiles%2Fovernet-stairs-denim.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx",
         "assets/objects/dish.tsx",
         "areas/default.tmx",
@@ -366,9 +376,7 @@
         "areas/olddefault.tmx",
         "assets/objects/home_warp.tsx",
         "assets/denim_b_tiles/undernet-floors-denim-0b.tsx",
-        "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx",
-        "C:/Users/Keris/Documents/Repos/ONB/net-city/areas/base_homepage.tmx",
-        "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx"
+        "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
