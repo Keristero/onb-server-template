@@ -13,8 +13,6 @@ Net:on("actor_interaction", function(event)
 end)
 
 return {
-    function_name = 'on_actor_interaction',
     global_object = '',
     description = 'triggers when a player interacts with a actor',
-    category = 'trigger'
 }

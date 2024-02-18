@@ -5,11 +5,11 @@
     },
     "activeFile": "areas/default.tmx",
     "expandedProjectPaths": [
-        "assets",
-        ".",
-        "assets/denim_b_tiles",
         "areas",
         "assets/objects",
+        "assets/denim_b_tiles",
+        ".",
+        "assets",
         "assets/tiles"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -224,11 +224,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1.5,
+            "scale": 5.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1289.6666666666665,
-                "y": 511
+                "x": 1150.7272727272727,
+                "y": 773.5454545454545
             }
         },
         "areas/ezlibs.tmx": {
@@ -358,18 +358,16 @@
     "map.tileWidth": 64,
     "map.width": 40,
     "openFiles": [
-        "areas/default.tmx",
-        "assets/objects/dish.tsx",
-        "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"
+        "areas/default.tmx"
     ],
     "project": "server.tiled-project",
-    "property.type": "object",
+    "property.type": "string",
     "recentFiles": [
+        "areas/default.tmx",
+        "assets/objects/dish.tsx",
+        "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx",
         "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1683436961-%2Fserver%2Fassets%2Fobjects%2Fcoffee.tsx",
         "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1708225914-%2Fserver%2Fassets%2Fdenim_b_tiles%2Fovernet-stairs-denim.tsx",
-        "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx",
-        "assets/objects/dish.tsx",
-        "areas/default.tmx",
         "assets/denim_b_tiles/overnet-stairs-denim.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-2b.tsx",
         "assets/objects/coffee.tsx",

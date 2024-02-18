@@ -11,8 +11,6 @@ Net:on("player_area_transfer", function(event)
 end)
 
 return {
-    function_name = 'on_player_area_transfer',
     global_object = '',
     description = 'triggers when a player transfers area',
-    category = 'trigger'
 }

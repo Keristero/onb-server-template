@@ -190,6 +190,13 @@ function netflow(previous_node,context,node_id)
 end
 
 --on load
+for key, function_definition in pairs(classes) do
+    if function_definition.after_plugin_load then
+        function_definition.after_plugin_load()
+    end
+end
+
+--do all the on starts, these must happen last
 local areas = Net.list_areas()
 for _, area_id in ipairs(areas) do
     local triggers = NetCached.get_cached_objects_by_class(area_id,'on_start')
