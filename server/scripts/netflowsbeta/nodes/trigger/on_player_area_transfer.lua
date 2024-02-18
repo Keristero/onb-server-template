@@ -6,8 +6,7 @@ Net:on("player_area_transfer", function(event)
             player_id = event.player_id,
             area_id = player_area
         }
-        local next_node_id = object.custom_properties.on_player_area_transfer
-        netflow(object,context,next_node_id)
+        netflow(object,context)
     end
 end)
 
@@ -15,11 +14,5 @@ return {
     function_name = 'on_player_area_transfer',
     global_object = '',
     description = 'triggers when a player transfers area',
-    category = 'trigger',
-    handlers = {
-        [1]={
-            name='on_player_area_transfer',
-            type='object'
-        }
-    }
+    category = 'trigger'
 }

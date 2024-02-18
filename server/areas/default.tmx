@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="62">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="76">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/home_warp.tsx"/>
  <tileset firstgid="30" source="../assets/objects/coffee.tsx"/>
@@ -99,7 +99,7 @@
   </object>
   <object id="14" name="bot spawner" type="Interactable" gid="34" x="432" y="528" width="58" height="85">
    <properties>
-    <property name="on_object_interaction" type="object" value="38"/>
+    <property name="on_object_interaction" type="object" value="37"/>
    </properties>
   </object>
   <object id="17" name="start" type="on_start" x="272" y="528">
@@ -158,30 +158,23 @@
    </properties>
    <point/>
   </object>
-  <object id="33" name="sleep" type="sleep" x="496" y="336">
+  <object id="33" name="sleep (infinite loop)" type="sleep" x="488" y="328">
    <properties>
-    <property name="_then" type="object" value="37"/>
+    <property name="_then" type="object" value="75"/>
     <property name="duration" type="float" value="7"/>
    </properties>
    <point/>
   </object>
   <object id="35" name="on start" type="on_start" x="368" y="336">
    <properties>
-    <property name="_then" type="object" value="37"/>
+    <property name="_then" type="object" value="75"/>
    </properties>
    <point/>
   </object>
-  <object id="37" name="all" type="all" x="432" y="336">
-   <properties>
-    <property name="_then" type="object" value="38"/>
-    <property name="next2" type="object" value="33"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="38" name="all" type="all" x="432" y="368">
+  <object id="37" name="all" type="all" x="432" y="376">
    <properties>
     <property name="_then" type="object" value="3"/>
-    <property name="next2" type="object" value="42"/>
+    <property name="_then2" type="object" value="42"/>
    </properties>
    <point/>
   </object>
@@ -241,7 +234,7 @@
    </properties>
    <point/>
   </object>
-  <object id="50" name="bot details" type="bot_details" x="368" y="664">
+  <object id="50" name="bot who goes up n down" type="bot_details" x="368" y="664">
    <properties>
     <property name="animation_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/prog.animation"/>
     <property name="name" value="prog"/>
@@ -276,9 +269,94 @@
   <object id="61" name="message player" type="message_player" x="280" y="584">
    <properties>
     <property name="_then" type="object" value="0"/>
-    <property name="message" value="STAIRS ARE NOTHIN SPECIAL"/>
+    <property name="message" value="STAIRS ARE NOTHING TO ME!"/>
     <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
     <property name="mug_texture_path" value="/server/assets/ezlibs-assets/eznpcs/mug/prog.png"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="62" name="start" type="on_start" x="576" y="600">
+   <properties>
+    <property name="_then" type="object" value="63"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="63" name="create bot" type="create_bot" x="568" y="624">
+   <properties>
+    <property name="bot" type="object" value="64"/>
+    <property name="on_actor_interaction" type="object" value="65"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="64" name="unpack example bot" type="bot_details" x="560" y="688">
+   <properties>
+    <property name="animation_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/fireman-bn45.animation"/>
+    <property name="name" value="prog"/>
+    <property name="texture_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/fireman-bn45.png"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="65" name="message player" type="message_player" x="624" y="672">
+   <properties>
+    <property name="_then" type="object" value="66"/>
+    <property name="message" value="Whats cookin?"/>
+    <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
+    <property name="mug_texture_path" value="/server/assets/ezlibs-assets/eznpcs/mug/fireman-bn45.png"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="66" name="get player mugshot" type="get_player_mugshot" x="648" y="648">
+   <properties>
+    <property name="_then" type="object" value="71"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="69" type="message_player" x="680" y="696">
+   <properties>
+    <property name="_then" type="object" value="74"/>
+    <property name="message" value="My mum!"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="70" name="unpack texture_details" type="unpack" x="728" y="656">
+   <properties>
+    <property name="_then" type="object" value="72"/>
+    <property name="animation_path" value="animation_path"/>
+    <property name="parameter_name" value="texture_details"/>
+    <property name="texture_path" value="mug_texture_path"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="71" name="print" type="print" x="672" y="624">
+   <properties>
+    <property name="_then" type="object" value="70"/>
+    <property name="console_color" propertytype="console_color" value="yellow"/>
+    <property name="print_context" type="bool" value="true"/>
+    <property name="print_label" value="Pre unpack context"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="72" name="print" type="print" x="704" y="680">
+   <properties>
+    <property name="_then" type="object" value="69"/>
+    <property name="console_color" propertytype="console_color" value="green"/>
+    <property name="print_context" type="bool" value="true"/>
+    <property name="print_label" value="Post unpack context, see what happened?, texture_details vanished and it's values replaced firemans mugshot details"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="74" type="message_player" x="664" y="712">
+   <properties>
+    <property name="message" value="oof! check the console for details on how unpack works"/>
+    <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
+    <property name="mug_texture_path" value="/server/assets/ezlibs-assets/eznpcs/mug/fireman-bn45.png"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="75" name="all" type="all" x="432" y="328">
+   <properties>
+    <property name="_then" type="object" value="37"/>
+    <property name="_then2" type="object" value="33"/>
    </properties>
    <point/>
   </object>

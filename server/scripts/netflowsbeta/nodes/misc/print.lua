@@ -15,23 +15,28 @@ return {
     category = 'misc',
     override_func = function (node,context)
         local print_out = {}
-        table.insert(print_out,colors[context.console_color])
-        if context.print_label then
+        local cp = node.custom_properties
+        table.insert(print_out,colors[cp.console_color])
+        if cp.print_label then
             table.insert(print_out,"\nLABEL\n")
-            table.insert(print_out,context.print_label)
+            table.insert(print_out,cp.print_label)
         end
-        if context.print_node then
+        if cp.print_parameter then
+            table.insert(print_out,"\n"..cp.print_parameter.."\n")
+            table.insert(print_out,cp[cp.print_parameter])
+        end
+        if cp.print_node then
             table.insert(print_out,"\nNODE\n")
             table.insert(print_out,node)
         end
-        if context.print_context then
+        if cp.print_context then
             table.insert(print_out,"\nCONTEXT\n")
             table.insert(print_out,context)
         end
         table.insert(print_out,"\27[0m")
         print(table.unpack(print_out))
     end,
-    arguments = {
+    handlers = {
         [1]={
             name='print_label',
             type='string',
@@ -52,6 +57,10 @@ return {
             type='string',
             propertyType='console_color',
             default="yellow"
+        },
+        [5]={
+            name='print_parameter',
+            type='string'
         }
     }
 }

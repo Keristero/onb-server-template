@@ -5,10 +5,10 @@
     },
     "activeFile": "areas/default.tmx",
     "expandedProjectPaths": [
-        "assets/denim_b_tiles",
         "assets",
-        "areas",
         ".",
+        "assets/denim_b_tiles",
+        "areas",
         "assets/objects",
         "assets/tiles"
     ],
@@ -216,11 +216,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 3,
-            "selectedLayer": 3,
+            "scale": 1.5,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 939,
-                "y": 485.83333333333326
+                "x": 1289.6666666666665,
+                "y": 511
             }
         },
         "areas/ezlibs.tmx": {
@@ -357,10 +357,10 @@
     "project": "server.tiled-project",
     "property.type": "object",
     "recentFiles": [
-        "assets/denim_b_tiles/overnet-stairs-denim.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx",
         "assets/objects/dish.tsx",
         "areas/default.tmx",
+        "assets/denim_b_tiles/overnet-stairs-denim.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-2b.tsx",
         "assets/objects/coffee.tsx",
         "areas/olddefault.tmx",
