@@ -1,6 +1,7 @@
 local helpers = require('scripts/netflowsbeta/helpers')
 local exporters = require('scripts/netflowsbeta/export/export')
-NetCached = require('scripts/netflowsbeta/NetCached')
+NetCached = require('scripts/netflowsbeta/globals/NetCached')
+Direction = require('scripts/netflowsbeta/globals/Direction')
 
 local classes = {}
 

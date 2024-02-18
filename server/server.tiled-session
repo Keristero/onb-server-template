@@ -1,0 +1,381 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "areas/default.tmx",
+    "expandedProjectPaths": [
+        "assets/denim_b_tiles",
+        "assets",
+        "areas",
+        ".",
+        "assets/objects",
+        "assets/tiles"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/areas/base_homepage.tmx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 1598.5,
+                "y": 798.5
+            }
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/areas/bn5cubegreen_bot.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/areas/default.tmx": {
+            "scale": 0.15456054687499998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2571.8076704365963,
+                "y": 1209.8818474758327
+            }
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/ezlibs-assets/ezmystery/BlueMysteryData.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/building_door.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/edit_mode_tile_removal_cursor.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/home_warp.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/hp_warp.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/met_virus.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/pokmenjpg.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/server_warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/special.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/tablet.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/test_building.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/test_building_stackable.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/test_building_top.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/test_warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/tree.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/objects/warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/tiles/GreenPurp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/tiles/Ice.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/tiles/Skybox_Tileset.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/tiles/StandardBlue.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/tiles/StandardGren.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/tiles/tall_tile.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/assets/tiles/test_floor.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/homepages/Keristero.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1606.5,
+                "y": 838.5
+            }
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/edit_mode_tile_removal_cursor.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/home_warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/hp_warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/met_virus.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/pokmenjpg.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/server_warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/special.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/tablet.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/tree.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/objects/warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/tiles/GreenPurp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/tiles/Ice.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/tiles/StandardBlue.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/tiles/StandardGren.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/assets/tiles/tall_tile.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/memory/hps/Keristero.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1618.5,
+                "y": 797.5
+            }
+        },
+        "C:/server/assets/objects/edit_mode_tile_removal_cursor.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/objects/home_warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/objects/hp_warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/objects/met_virus.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/objects/pokmenjpg.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/objects/server_warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/objects/special.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/objects/tablet.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/objects/tree.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/objects/warp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/tiles/GreenPurp.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/tiles/Ice.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/tiles/StandardBlue.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/tiles/StandardGren.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/server/assets/tiles/tall_tile.tsx": {
+            "scaleInDock": 1
+        },
+        "areas/default.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 3,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 939,
+                "y": 485.83333333333326
+            }
+        },
+        "areas/ezlibs.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 598.3333333333333,
+                "y": 268.33333333333326
+            }
+        },
+        "areas/netflows.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 552.5,
+                "y": 330.5
+            }
+        },
+        "areas/olddefault.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 773,
+                "y": 286.3333333333333
+            }
+        },
+        "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/denim_b_tiles/cybernet-floors-denim-1b.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/denim_b_tiles/cybernet-floors-denim-2b.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/denim_b_tiles/overnet-stairs-denim.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/denim_b_tiles/undernet-floors-denim-0b.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/denim_b_tiles/undernet-floors-denim-1a.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/ezlibs-assets/ezcheckpoints/bn5cubegreen - Copy.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/ezlibs-assets/ezcheckpoints/bn5cubegreen.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/ezlibs-assets/ezcheckpoints/bn5cubegreen_tile.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/ezlibs-assets/ezmystery/GreenMysteryData.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/objects/coffee.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/objects/dish.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/objects/home_warp.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/objects/warp.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/tiles/coffee.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/tiles/floor.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "assets/tiles/home_warp.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "frame.defaultDuration": 100,
+    "last.externalTilesetPath": "C:/Users/Keris/Documents/Repos/ONB/onb-server-template/server/assets/ezlibs-assets/ezcheckpoints",
+    "last.imagePath": "C:/Users/Keris/Documents/Repos/ONB/onb-server-template/server/assets/ezlibs-assets/ezcheckpoints",
+    "map.height": 40,
+    "map.lastUsedFormat": "tmx",
+    "map.orientation": null,
+    "map.tileWidth": 64,
+    "map.width": 40,
+    "openFiles": [
+        "areas/default.tmx",
+        "assets/objects/dish.tsx",
+        "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"
+    ],
+    "project": "server.tiled-project",
+    "property.type": "object",
+    "recentFiles": [
+        "assets/denim_b_tiles/overnet-stairs-denim.tsx",
+        "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx",
+        "assets/objects/dish.tsx",
+        "areas/default.tmx",
+        "assets/denim_b_tiles/cybernet-floors-denim-2b.tsx",
+        "assets/objects/coffee.tsx",
+        "areas/olddefault.tmx",
+        "assets/objects/home_warp.tsx",
+        "assets/denim_b_tiles/undernet-floors-denim-0b.tsx",
+        "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx",
+        "C:/Users/Keris/Documents/Repos/ONB/net-city/areas/base_homepage.tmx",
+        "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.margin": 0,
+    "tileset.spacing": 0,
+    "tileset.tileSize": {
+        "height": 32,
+        "width": 64
+    }
+}

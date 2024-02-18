@@ -5,6 +5,10 @@ end
 
 function await(v) return Async.await(v) end
 
+function interpolate(a, b, t)
+  return a * (1 - t) + b * t
+end
+
 function listFilesByType(path, fileType)
     local files = {}
     local cmd
