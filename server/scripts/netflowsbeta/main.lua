@@ -62,11 +62,6 @@ function load_context(object,context,definition)
         return
     end
     copy_mapped_keys_to_target(context,object,definition)
-    local target_object_id = object.custom_properties._target_object
-    if target_object_id then
-        local target_object = NetCached.get_object_by_id(context.area_id,target_object_id)
-        copy_mapped_keys_to_target(context,target_object,definition)
-    end
     --copy any values that we need to copy from other objects
     for key, argument in pairs(definition.arguments) do
         if argument.copy_from_target then
@@ -104,6 +99,7 @@ function copy_arguments_from_context(context,arguments,ignore_missing,use_real_n
                 table.insert(arg_table,value)
             end
         else
+            --copy from target is used to load details from other targets, like bot_details for create_bot
             local sub_definition = classes[argument_docs.copy_from_target]
             table.insert(arg_table,copy_arguments_from_context(context,sub_definition.arguments,true,true))
         end
@@ -142,18 +138,6 @@ function netflow(previous_node,context,node_id)
         local new_context = {}
         for key, value in pairs(context) do
             new_context[key] = value
-        end
-        --do the before action, if it exists
-        local before_node_id = previous_node.custom_properties._before
-        if before_node_id then
-            --find the node
-            local before_node = NetCached.get_object_by_id(new_context.area_id, before_node_id)
-            --find a function for it
-            local function_definition = classes[before_node.class]
-            if function_definition then
-                --run the function
-                await(execute_action(before_node,new_context,function_definition))
-            end
         end
         --do the next action
         local current_node_id = node_id or previous_node.custom_properties._then

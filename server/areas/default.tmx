@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="84">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="90">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/home_warp.tsx"/>
  <tileset firstgid="30" source="../assets/objects/coffee.tsx"/>
  <tileset firstgid="34" source="../assets/objects/dish.tsx"/>
  <tileset firstgid="36" source="../assets/denim_b_tiles/overnet-stairs-denim.tsx"/>
  <tileset firstgid="68" source="../assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"/>
+ <tileset firstgid="212" source="../assets/objects/warp.tsx"/>
  <layer id="1" name="Tile Layer 1" class="Home Warp" width="40" height="40" opacity="0.9">
   <properties>
    <property name="Direction" value="Down"/>
@@ -143,12 +144,6 @@
   <object id="26" name="walk bot" type="walk_bot" x="560" y="464">
    <properties>
     <property name="_then" type="object" value="32"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="31" name="sleep" type="sleep" x="496" y="440">
-   <properties>
-    <property name="duration" type="float" value="1"/>
    </properties>
    <point/>
   </object>
@@ -399,6 +394,30 @@
    </properties>
    <point/>
   </object>
+  <object id="84" name="test" type="Interactable" gid="34" x="536" y="776" width="58" height="85">
+   <properties>
+    <property name="on_object_interaction" type="object" value="85"/>
+   </properties>
+  </object>
+  <object id="85" name="start encounter" type="initiate_encounter" x="568" y="872">
+   <properties>
+    <property name="package_path" value="/server/assets/ezlibs-assets/ezencounters/ezencounters.zip"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="86" type="Custom Warp" gid="213" x="528" y="720" width="61" height="32">
+   <properties>
+    <property name="on_custom_warp" type="object" value="87"/>
+   </properties>
+  </object>
+  <object id="87" type="transfer_player" x="496" y="840">
+   <properties>
+    <property name="area_id" value="other_map"/>
+    <property name="target_object_id" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="88" type="Custom Warp" gid="213" x="448" y="576" width="61" height="32"/>
  </objectgroup>
  <layer id="3" name="Tile Layer 2" width="40" height="40" offsetx="0" offsety="-16">
   <data encoding="csv">

@@ -5,12 +5,12 @@
     },
     "activeFile": "areas/default.tmx",
     "expandedProjectPaths": [
-        "areas",
-        "assets/objects",
+        "assets",
         "assets/denim_b_tiles",
         ".",
-        "assets",
-        "assets/tiles"
+        "assets/tiles",
+        "areas",
+        "assets/objects"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -224,11 +224,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 5.5,
+            "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1150.7272727272727,
-                "y": 773.5454545454545
+                "x": 1057.25,
+                "y": 663
             }
         },
         "areas/ezlibs.tmx": {
@@ -262,6 +262,17 @@
             "viewCenter": {
                 "x": 773,
                 "y": 286.3333333333333
+            }
+        },
+        "areas/other_map.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 1303.25,
+                "y": 718
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
@@ -358,11 +369,15 @@
     "map.tileWidth": 64,
     "map.width": 40,
     "openFiles": [
-        "areas/default.tmx"
+        "areas/default.tmx",
+        "areas/other_map.tmx",
+        "assets/objects/warp.tsx"
     ],
     "project": "server.tiled-project",
-    "property.type": "string",
+    "property.type": "Direction",
     "recentFiles": [
+        "assets/objects/warp.tsx",
+        "areas/other_map.tmx",
         "areas/default.tmx",
         "assets/objects/dish.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx",
@@ -372,9 +387,7 @@
         "assets/denim_b_tiles/cybernet-floors-denim-2b.tsx",
         "assets/objects/coffee.tsx",
         "areas/olddefault.tmx",
-        "assets/objects/home_warp.tsx",
-        "assets/denim_b_tiles/undernet-floors-denim-0b.tsx",
-        "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx"
+        "assets/objects/home_warp.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",

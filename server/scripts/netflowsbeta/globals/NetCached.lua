@@ -55,13 +55,11 @@ function NetCached.get_object_by_id(area_id, object_id)
     area_id = tostring(area_id)
     object_id = tostring(object_id)
     --same as Net.get_object_by_id except it uses objects from a cache and caches them if they are not already cached
-    if not NetCached.cache[area_id] then
-        return nil
+    if NetCached.cache[area_id] then
+        if NetCached.cache[area_id][object_id] then
+            return NetCached.cache[area_id][object_id]
+        end
     end
-    if NetCached.cache[area_id][object_id] then
-        return NetCached.cache[area_id][object_id]
-    else
-        return Net.get_object_by_id(area_id, object_id)
-    end
+    return Net.get_object_by_id(area_id, object_id)
 end
 return NetCached

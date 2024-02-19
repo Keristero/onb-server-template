@@ -1,6 +1,6 @@
 return {
     global_object = 'Net',
-    description = 'Transfer player to a location on a map',
+    description = 'details for transfer_player',
     arguments = {
         [1]={
             name='player_id',
@@ -36,11 +36,6 @@ return {
             propertyType='Direction',
             default="Down",
             custom_property="Direction"
-        },
-        [8]={
-            name='target_object_id',
-            type='int',
-            copy_from_target='transfer_details'
         }
     }
 }
