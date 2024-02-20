@@ -224,11 +224,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1.5,
+            "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1279.6666666666665,
-                "y": 623.3333333333333
+                "x": 903.75,
+                "y": 540.5
             }
         },
         "areas/ezlibs.tmx": {
@@ -271,7 +271,7 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1279.75,
+                "x": 1280,
                 "y": 640
             }
         },
@@ -373,7 +373,7 @@
         "areas/other_map.tmx"
     ],
     "project": "server.tiled-project",
-    "property.type": "Direction",
+    "property.type": "string",
     "recentFiles": [
         "areas/other_map.tmx",
         "areas/default.tmx",

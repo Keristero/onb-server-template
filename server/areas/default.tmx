@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="100">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="111">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/home_warp.tsx"/>
  <tileset firstgid="30" source="../assets/objects/coffee.tsx"/>
@@ -103,13 +103,13 @@
     <property name="on_object_interaction" type="object" value="37"/>
    </properties>
   </object>
-  <object id="17" name="start" type="on_start" x="272" y="528">
+  <object id="17" name="start" type="on_start" x="80" y="496">
    <properties>
     <property name="_then" type="object" value="18"/>
    </properties>
    <point/>
   </object>
-  <object id="18" name="set song" type="set_song" x="304" y="528">
+  <object id="18" name="set song" type="set_song" x="80" y="464">
    <properties>
     <property name="_then" type="object" value="39"/>
     <property name="song_path" value="/server/assets/music/boundless-network.ogg"/>
@@ -173,7 +173,7 @@
    </properties>
    <point/>
   </object>
-  <object id="39" name="print" type="print" x="304" y="496">
+  <object id="39" name="print" type="print" x="80" y="432">
    <properties>
     <property name="_then" type="object" value="43"/>
     <property name="console_color" propertytype="console_color" value="cyan"/>
@@ -200,7 +200,7 @@
    </properties>
    <point/>
   </object>
-  <object id="43" name="print" type="print" x="304" y="480">
+  <object id="43" name="print" type="print" x="80" y="400">
    <properties>
     <property name="_then" type="object" value="44"/>
     <property name="console_color" propertytype="console_color" value="blue"/>
@@ -208,7 +208,7 @@
    </properties>
    <point/>
   </object>
-  <object id="44" name="print" type="print" x="304" y="464">
+  <object id="44" name="print" type="print" x="80" y="368">
    <properties>
     <property name="console_color" propertytype="console_color" value="magenta"/>
     <property name="print_label" value="...See if you can find it on the map!"/>
@@ -355,26 +355,23 @@
    </properties>
    <point/>
   </object>
-  <object id="76" name="get player mugshot" type="get_player_mugshot" x="680" y="840">
+  <object id="76" name="get player mugshot" type="get_player_mugshot" x="144" y="432">
    <properties>
     <property name="_then" type="object" value="80"/>
    </properties>
    <point/>
   </object>
-  <object id="78" name="message_player" type="message_player" x="736" y="792">
-   <properties>
-    <property name="message" value="yo"/>
-   </properties>
+  <object id="78" name="message_player" type="message_player" x="144" y="368">
    <point/>
   </object>
-  <object id="79" name="send_player_mugshot_message (function_netflow)" type="function_netflow" x="640" y="856">
+  <object id="79" name="send_player_mugshot_message (function_netflow)" type="function_netflow" x="144" y="496">
    <properties>
     <property name="_then" type="object" value="76"/>
     <property name="function_name" value="send_player_mugshot_message"/>
    </properties>
    <point/>
   </object>
-  <object id="80" name="unpack texture_details" type="unpack" x="704" y="800">
+  <object id="80" name="unpack texture_details" type="unpack" x="144" y="400">
    <properties>
     <property name="_then" type="object" value="78"/>
     <property name="animation_path" value="mug_animation_path"/>
@@ -391,6 +388,7 @@
   <object id="82" name="call send_player_mugshot_message" type="call_function_netflow" x="648" y="776">
    <properties>
     <property name="function_name" value="send_player_mugshot_message"/>
+    <property name="message" value="I just called a function, cool!"/>
    </properties>
    <point/>
   </object>
@@ -444,6 +442,72 @@
    </properties>
    <point/>
   </object>
+  <object id="100" name="Animate bot" type="animate_bot_properties" x="296" y="776">
+   <properties>
+    <property name="first_keyframe_details" type="object" value="101"/>
+    <property name="on_animation_duration_elapsed" type="object" value="110"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="101" name="keyframe 1" type="keyframe_details" x="296" y="752">
+   <properties>
+    <property name="X" propertytype="EasingType" value="In"/>
+    <property name="Y" propertytype="EasingType" value="In"/>
+    <property name="_keyframe_detail_values" type="object" value="103"/>
+    <property name="_next_keyframe" type="object" value="102"/>
+    <property name="duration" type="float" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="102" name="keyframe 2" type="keyframe_details" x="296" y="736">
+   <properties>
+    <property name="X" propertytype="EasingType" value="In"/>
+    <property name="Y" propertytype="EasingType" value="In"/>
+    <property name="_keyframe_detail_values" type="object" value="108"/>
+    <property name="duration" type="float" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="103" name="keyframe 1 values" type="keyframe_detail_values" x="384" y="768">
+   <point/>
+  </object>
+  <object id="104" name="start" type="on_start" x="344" y="800">
+   <properties>
+    <property name="_then" type="object" value="105"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="105" name="create bot" type="create_bot" x="360" y="784">
+   <properties>
+    <property name="bot" type="object" value="106"/>
+    <property name="on_actor_interaction" type="object" value="100"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="106" name="unpack example bot" type="bot_details" x="408" y="784">
+   <properties>
+    <property name="animation_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/fireman-bn45.animation"/>
+    <property name="name" value="prog"/>
+    <property name="texture_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/fireman-bn45.png"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="108" name="keyframe 2 values" type="keyframe_detail_values" x="72" y="752">
+   <point/>
+  </object>
+  <object id="109" name="call send_player_mugshot_message" type="call_function_netflow" x="176" y="784">
+   <properties>
+    <property name="function_name" value="send_player_mugshot_message"/>
+    <property name="message" value="...off he goes..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="110" name="remove bot" type="remove_bot" x="208" y="776">
+   <properties>
+    <property name="_then" type="object" value="109"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
  <layer id="3" name="Tile Layer 2" width="40" height="40" offsetx="0" offsety="-16">
   <data encoding="csv">
@@ -466,9 +530,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,74,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,74,74,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,74,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,74,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,75,86,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,75,86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

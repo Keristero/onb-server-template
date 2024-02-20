@@ -33,6 +33,19 @@ local hardcoded_enums = {
             "cyan"
         },
         valuesAsFlags=false
+    },
+    {
+        name='EasingType',
+        storageType='string',
+        type='enum',
+        values={
+            "Linear",
+            "In",
+            "Out",
+            "InOut",
+            "Floor"
+        },
+        valuesAsFlags=false
     }
 }
 
@@ -52,7 +65,7 @@ local readme_layout = {
     },
     [4]={
         nodes_of_category='data',
-        short_description='data storage nodes, often referenced by other nodes'
+        short_description='data storage nodes, often referenced by other nodes - not for use in flows'
     },
     [5]={
         nodes_of_category="dialogue",
@@ -185,12 +198,14 @@ exporters.export_tiled_types = function(nodes,project_path)
         end
         new_type.color = category_colors[doc.category]
 
-        --add member for all categories
-        local new_arg = {
-            name='_then',
-            type='object'
-        }
-        table.insert(new_type.members,new_arg)
+        --add member for all categories, except data
+        if doc.category ~= "data" then
+            local new_arg = {
+                name='_then',
+                type='object'
+            }
+            table.insert(new_type.members,new_arg)
+        end
 
         --populate members
         if doc.arguments then
@@ -212,8 +227,12 @@ exporters.export_tiled_types = function(nodes,project_path)
             for index, handler_doc in ipairs(doc.handlers) do
                 local new_arg = {
                     name=handler_doc.name,
-                    type='object',
+                    type=handler_doc.type,
+                    value=handler_doc.default
                 }
+                if handler_doc.propertyType then
+                    new_arg.propertyType = handler_doc.propertyType
+                end
                 table.insert(new_type.members,new_arg)
             end
         end
