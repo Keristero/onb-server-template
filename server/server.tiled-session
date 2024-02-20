@@ -224,11 +224,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 2,
+            "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1057.25,
-                "y": 663
+                "x": 1279.6666666666665,
+                "y": 623.3333333333333
             }
         },
         "areas/ezlibs.tmx": {
@@ -271,8 +271,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1303.25,
-                "y": 718
+                "x": 1279.75,
+                "y": 640
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
@@ -370,15 +370,14 @@
     "map.width": 40,
     "openFiles": [
         "areas/default.tmx",
-        "areas/other_map.tmx",
-        "assets/objects/warp.tsx"
+        "areas/other_map.tmx"
     ],
     "project": "server.tiled-project",
     "property.type": "Direction",
     "recentFiles": [
-        "assets/objects/warp.tsx",
         "areas/other_map.tmx",
         "areas/default.tmx",
+        "assets/objects/warp.tsx",
         "assets/objects/dish.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx",
         "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1683436961-%2Fserver%2Fassets%2Fobjects%2Fcoffee.tsx",

@@ -192,12 +192,6 @@ exporters.export_tiled_types = function(nodes,project_path)
         }
         table.insert(new_type.members,new_arg)
 
-        local new_arg = {
-            name='_before',
-            type='object'
-        }
-        table.insert(new_type.members,new_arg)
-
         --populate members
         if doc.arguments then
             for index, arg_doc in ipairs(doc.arguments) do
