@@ -1,5 +1,6 @@
 local helpers = require('scripts/netflowsbeta/helpers')
 local exporters = require('scripts/netflowsbeta/export/export')
+local data_store = require('scripts/netflowsbeta/data_store')
 NetCached = require('scripts/netflowsbeta/globals/NetCached')
 Direction = require('scripts/netflowsbeta/globals/Direction')
 
@@ -20,7 +21,8 @@ local node_script_folders = {
     'player',
     'tile',
     'trigger',
-    'object'
+    'object',
+    'storage'
 }
 --actually require the scripts
 for index, category_folder in ipairs(node_script_folders) do
@@ -174,20 +176,31 @@ function netflow(previous_node,context,node_id)
 end
 
 --on load
-for key, function_definition in pairs(classes) do
-    if function_definition.after_plugin_load then
-        function_definition.after_plugin_load()
-    end
+
+local function main_function()
+    return async(function ()
+        --initialize the data store
+        await(data_store.initialize())
+        for key, function_definition in pairs(classes) do
+            if function_definition.after_plugin_load then
+                function_definition.after_plugin_load()
+            end
+        end
+        
+        --do all the on starts, these must happen last
+        local areas = Net.list_areas()
+        for _, area_id in ipairs(areas) do
+            local triggers = NetCached.get_cached_objects_by_class(area_id,'on_start')
+            for key, object in pairs(triggers) do
+                local context = {
+                    area_id = area_id,
+                }
+                netflow(object,context)
+            end
+        end
+
+
+    end)
 end
 
---do all the on starts, these must happen last
-local areas = Net.list_areas()
-for _, area_id in ipairs(areas) do
-    local triggers = NetCached.get_cached_objects_by_class(area_id,'on_start')
-    for key, object in pairs(triggers) do
-        local context = {
-            area_id = area_id,
-        }
-        netflow(object,context)
-    end
-end
+main_function()

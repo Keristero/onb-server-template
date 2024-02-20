@@ -1,5 +1,5 @@
-local json = require('scripts/netflowsbeta/export/json')
-local table_gen = require('scripts/netflowsbeta/export/table_gen')
+local json = require('scripts/netflowsbeta/libs/json')
+local table_gen = require('scripts/netflowsbeta/libs/table_gen')
 
 local distinct_colors = {'#e6194B', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#42d4f4', '#f032e6', '#bfef45', '#fabed4', '#469990', '#dcbeff', '#9A6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#a9a9a9', '#ffffff', '#000000'}
 
@@ -84,14 +84,18 @@ local readme_layout = {
         short_description='player related nodes'
     },
     [9]={
+        nodes_of_category="storage",
+        short_description='use the data store and save/load context variables'
+    },
+    [10]={
         nodes_of_category="tile",
         short_description='nodes that the player actually interacts with on the map, all other types are removed from the map on boot.'
     },
-    [10]={
+    [11]={
         nodes_of_category="trigger",
         short_description='used for beginning flows from server events'
     },
-    [11]={
+    [12]={
         nodes_of_category="object",
         short_description='interacting with objects'
     }
@@ -193,7 +197,6 @@ exporters.export_tiled_types = function(nodes,project_path)
         }
         --pick a color
         if not category_colors[doc.category] then
-            print(doc.category)
             category_colors[doc.category] = table.remove(distinct_colors,  1)
         end
         new_type.color = category_colors[doc.category]

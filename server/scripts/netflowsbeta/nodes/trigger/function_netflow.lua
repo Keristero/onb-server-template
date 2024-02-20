@@ -12,10 +12,8 @@ return {
         local areas = Net.list_areas()
         for _, area_id in ipairs(areas) do
             local triggers = NetCached.get_cached_objects_by_class(area_id,'function_netflow')
-            print('triggers',triggers)
             for key, object in pairs(triggers) do
                 local function_name = object.custom_properties.function_name
-                print('storing function',function_name)
                 if not function_netflows_by_name[function_name] then
                     function_netflows_by_name[function_name] = {}
                 end

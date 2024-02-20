@@ -1,5 +1,4 @@
 local function try_add_property(keyframe_details,keyframe_detail_values_object,description,output)
-    print('trying to add prop',description.name,'from',keyframe_detail_values_object)
     local anim_property = {
         property=description.name
     }
