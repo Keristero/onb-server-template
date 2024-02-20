@@ -5,12 +5,13 @@
     },
     "activeFile": "areas/default.tmx",
     "expandedProjectPaths": [
-        "assets",
-        "assets/denim_b_tiles",
-        ".",
         "assets/tiles",
-        "areas",
-        "assets/objects"
+        "assets",
+        ".",
+        "assets/denim_b_tiles",
+        "assets/objects",
+        "assets/ezlibs-assets",
+        "areas"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -227,8 +228,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 903.75,
-                "y": 540.5
+                "x": 1162,
+                "y": 784.5
             }
         },
         "areas/ezlibs.tmx": {
@@ -370,11 +371,13 @@
     "map.width": 40,
     "openFiles": [
         "areas/default.tmx",
-        "areas/other_map.tmx"
+        "areas/other_map.tmx",
+        "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx"
     ],
     "project": "server.tiled-project",
     "property.type": "string",
     "recentFiles": [
+        "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx",
         "areas/other_map.tmx",
         "areas/default.tmx",
         "assets/objects/warp.tsx",
@@ -385,8 +388,7 @@
         "assets/denim_b_tiles/overnet-stairs-denim.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-2b.tsx",
         "assets/objects/coffee.tsx",
-        "areas/olddefault.tmx",
-        "assets/objects/home_warp.tsx"
+        "areas/olddefault.tmx"
     ],
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",

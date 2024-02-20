@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="111">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="144">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/home_warp.tsx"/>
  <tileset firstgid="30" source="../assets/objects/coffee.tsx"/>
@@ -7,6 +7,7 @@
  <tileset firstgid="36" source="../assets/denim_b_tiles/overnet-stairs-denim.tsx"/>
  <tileset firstgid="68" source="../assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"/>
  <tileset firstgid="212" source="../assets/objects/warp.tsx"/>
+ <tileset firstgid="218" source="../assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx"/>
  <layer id="1" name="Tile Layer 1" class="Home Warp" width="40" height="40" opacity="0.9">
   <properties>
    <property name="Direction" value="Down"/>
@@ -37,12 +38,12 @@
 0,0,0,0,0,0,0,0,0,0,0,0,23,0,23,23,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,23,0,0,23,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,23,0,0,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,23,23,23,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,23,23,23,23,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,23,23,23,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,23,23,23,0,23,23,23,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,23,23,23,23,23,23,23,0,0,0,15,15,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,23,23,23,0,23,23,23,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,15,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,15,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -300,20 +301,20 @@
    </properties>
    <point/>
   </object>
-  <object id="66" name="get player mugshot" type="get_player_mugshot" x="648" y="640">
+  <object id="66" name="get player mugshot" type="get_player_mugshot" x="648" y="632">
    <properties>
     <property name="_then" type="object" value="71"/>
    </properties>
    <point/>
   </object>
-  <object id="69" name="message_player" type="message_player" x="688" y="688">
+  <object id="69" name="message_player" type="message_player" x="752" y="736">
    <properties>
     <property name="_then" type="object" value="74"/>
     <property name="message" value="My mum!"/>
    </properties>
    <point/>
   </object>
-  <object id="70" name="unpack texture_details" type="unpack" x="728" y="648">
+  <object id="70" name="unpack texture_details" type="unpack" x="744" y="640">
    <properties>
     <property name="_then" type="object" value="72"/>
     <property name="animation_path" value="mug_animation_path"/>
@@ -322,7 +323,7 @@
    </properties>
    <point/>
   </object>
-  <object id="71" name="print" type="print" x="672" y="624">
+  <object id="71" name="print" type="print" x="680" y="608">
    <properties>
     <property name="_then" type="object" value="70"/>
     <property name="console_color" propertytype="console_color" value="yellow"/>
@@ -331,7 +332,7 @@
    </properties>
    <point/>
   </object>
-  <object id="72" name="print" type="print" x="704" y="672">
+  <object id="72" name="print" type="print" x="768" y="688">
    <properties>
     <property name="_then" type="object" value="69"/>
     <property name="console_color" propertytype="console_color" value="green"/>
@@ -340,7 +341,7 @@
    </properties>
    <point/>
   </object>
-  <object id="74" name="message_player" type="message_player" x="656" y="712">
+  <object id="74" name="message_player" type="message_player" x="704" y="752">
    <properties>
     <property name="message" value="oof! check the console for details on how unpack works"/>
     <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
@@ -385,7 +386,7 @@
     <property name="on_object_interaction" type="object" value="82"/>
    </properties>
   </object>
-  <object id="82" name="call send_player_mugshot_message" type="call_function_netflow" x="648" y="776">
+  <object id="82" name="call send_player_mugshot_message" type="call_function_netflow" x="664" y="856">
    <properties>
     <property name="function_name" value="send_player_mugshot_message"/>
     <property name="message" value="I just called a function, cool!"/>
@@ -397,7 +398,7 @@
     <property name="on_custom_warp" type="object" value="87"/>
    </properties>
   </object>
-  <object id="87" type="transfer_player" x="496" y="840">
+  <object id="87" type="transfer_player" x="544" y="840">
    <properties>
     <property name="area_id" value="other_map"/>
     <property name="target_object_id" type="int" value="1"/>
@@ -417,7 +418,7 @@
    </properties>
    <point/>
   </object>
-  <object id="95" name="exit text" type="message_player" x="496" y="904">
+  <object id="95" name="exit text" type="message_player" x="496" y="912">
    <properties>
     <property name="message" value="you have exited a collider trigger!"/>
    </properties>
@@ -505,6 +506,119 @@
   <object id="110" name="remove bot" type="remove_bot" x="208" y="776">
    <properties>
     <property name="_then" type="object" value="109"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="124" name="message player" type="kick_player" x="184" y="520">
+   <properties>
+    <property name="_then" type="object" value="0"/>
+    <property name="message" value="STAIRS ARE NOTHING TO ME!"/>
+    <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
+    <property name="mug_texture_path" value="/server/assets/ezlibs-assets/eznpcs/mug/prog.png"/>
+    <property name="reason" value="you died"/>
+    <property name="warp_out" type="bool" value="false"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="125" name="Animate player" type="animate_player_properties" x="720" y="1024">
+   <properties>
+    <property name="_then" type="object" value="133"/>
+    <property name="first_keyframe_details" type="object" value="131"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="128" name="keyframe 3 values" type="keyframe_detail_values" x="664" y="920">
+   <properties>
+    <property name="Animation" value="IDLE_DR"/>
+    <property name="Animation Speed" value="0"/>
+    <property name="Z" type="float" value="-1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="130" name="keyframe 4 values" type="keyframe_detail_values" x="704" y="944">
+   <properties>
+    <property name="Animation" value="WALK_DR"/>
+    <property name="Animation Speed" value="10"/>
+    <property name="Z" type="float" value="-20"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="131" name="keyframe 3" type="keyframe_details" x="704" y="1064">
+   <properties>
+    <property name="Animation" propertytype="EasingType" value="Floor"/>
+    <property name="X" propertytype="EasingType" value="Linear"/>
+    <property name="Y" propertytype="EasingType" value="Linear"/>
+    <property name="Z" propertytype="EasingType" value="In"/>
+    <property name="_keyframe_detail_values" type="object" value="128"/>
+    <property name="_next_keyframe" type="object" value="132"/>
+    <property name="duration" type="float" value="0.1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="132" name="keyframe 4" type="keyframe_details" x="688" y="1064">
+   <properties>
+    <property name="Animation" propertytype="EasingType" value="Floor"/>
+    <property name="X" propertytype="EasingType" value="Linear"/>
+    <property name="Y" propertytype="EasingType" value="Linear"/>
+    <property name="Z" propertytype="EasingType" value="Linear"/>
+    <property name="_keyframe_detail_values" type="object" value="130"/>
+    <property name="duration" type="float" value="2"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="133" name="sleep" type="sleep" x="744" y="1024">
+   <properties>
+    <property name="_then" type="object" value="141"/>
+    <property name="duration" type="float" value="0.1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="134" name="fade camera" type="fade_player_camera" x="744" y="992">
+   <properties>
+    <property name="_then" type="object" value="139"/>
+    <property name="color" type="object" value="135"/>
+    <property name="durationInSeconds" type="float" value="1.5"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="135" name="color" type="color_details" x="720" y="992">
+   <properties>
+    <property name="a" type="int" value="255"/>
+    <property name="b" type="int" value="1"/>
+    <property name="g" type="int" value="1"/>
+    <property name="r" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="137" name="kick" type="kick_player" x="744" y="944">
+   <properties>
+    <property name="reason" value="you died"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="138" name="sleep" type="sleep" x="744" y="960">
+   <properties>
+    <property name="_then" type="object" value="137"/>
+    <property name="duration" type="float" value="2"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="139" name="hold camera" type="move_player_camera" x="744" y="976">
+   <properties>
+    <property name="_then" type="object" value="138"/>
+    <property name="holdTimeInSeconds" type="float" value="2"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="140" type="collider_trigger" x="632" y="896" width="16" height="32">
+   <properties>
+    <property name="on_player_enters_collider" type="object" value="125"/>
+   </properties>
+  </object>
+  <object id="141" name="set song" type="set_song" x="744" y="1008">
+   <properties>
+    <property name="_then" type="object" value="134"/>
+    <property name="song_path" value="/server/assets/sfx/death.ogg"/>
    </properties>
    <point/>
   </object>
