@@ -1,7 +1,7 @@
 local data_store = require('scripts/netflowsbeta/data_store')
 
 return {
-    global_object = '',
+    global_object = 'Net',
     description = 'load variable from the  data store to the context, you can load values with an alias using saved_variable_name',
     override_func = function (node,context)
         local player_secret
@@ -27,6 +27,7 @@ return {
                 table.insert(keys,context.variable_name)
             end
             local value = data_store.get_value(keys)
+            print('got value',value)
             if value ~= nil then
                 context[context.variable_name] = value
             end
@@ -39,17 +40,19 @@ return {
         [1]={
             name='unique_to_player_secret',
             type='boolean',
-            default = false
+            default = false,
+            optional = true
         },
         [2]={
             name='unique_to_area_id',
             type='boolean',
-            default = false
-            
+            default = false,
+            optional = true
         },
         [3]={
             name='saved_variable_name',
-            type='string'
+            type='string',
+            optional = true
         },
         [4]={
             name='variable_name',
@@ -57,7 +60,8 @@ return {
         },
         [5]={
             name='table_key',
-            type='string'
+            type='string',
+            optional = true
         }
     }
 }

@@ -3,8 +3,8 @@ local memory_store = {}
 local json = require('scripts/netflowsbeta/libs/json')
 
 --config
-local json_path = '/netflows_memory.json'
-local backup_json_path = '/netflows_memory_backup.json'
+local json_path = 'netflows_memory.json'
+local backup_json_path = 'netflows_memory_backup.json'
 local settings = {
     write_to_disk_cooldown_seconds = 1,--dont write to disk any more frequently than this
 }
@@ -24,6 +24,9 @@ memory_store.initialize = function()
             data = json.decode(await(Async.read_file(backup_json_path)))
             return
         end)
+        if not data then
+            data = {}
+        end
     end)
 end
 

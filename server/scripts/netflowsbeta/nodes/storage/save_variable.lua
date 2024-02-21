@@ -1,7 +1,7 @@
 local data_store = require('scripts/netflowsbeta/data_store')
 
 return {
-    global_object = '',
+    global_object = 'Net',
     description = 'save variable from the context to the data store, you can save values with an alias using saved_variable_name',
     override_func = function (node,context)
         local player_secret
@@ -45,17 +45,19 @@ return {
         [1]={
             name='unique_to_player_secret',
             type='boolean',
-            default = false
+            default = false,
+            optional = true
         },
         [2]={
             name='unique_to_area_id',
             type='boolean',
-            default = false
-            
+            default = false,
+            optional = true
         },
         [3]={
             name='saved_variable_name',
-            type='string'
+            type='string',
+            optional = true
         },
         [4]={
             name='variable_name',
@@ -63,7 +65,8 @@ return {
         },
         [5]={
             name='table_key',
-            type='string'
+            type='string',
+            optional = true
         }
     }
 }

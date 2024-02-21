@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "areas/default.tmx",
+    "activeFile": "areas/other_map.tmx",
     "expandedProjectPaths": [
         "assets",
         "assets/ezlibs-assets",
@@ -228,8 +228,8 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1118.3333333333333,
-                "y": 578.6666666666667
+                "x": 1279.6666666666665,
+                "y": 631.3333333333333
             }
         },
         "areas/ezlibs.tmx": {
@@ -272,8 +272,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1306.75,
-                "y": 580
+                "x": 1402.25,
+                "y": 469
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
@@ -376,8 +376,8 @@
     "project": "server.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "areas/other_map.tmx",
         "areas/default.tmx",
+        "areas/other_map.tmx",
         "assets/objects/coffee.tsx",
         "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx",
         "assets/objects/warp.tsx",
