@@ -5,13 +5,13 @@
     },
     "activeFile": "areas/default.tmx",
     "expandedProjectPaths": [
-        "assets/tiles",
         "assets",
+        "assets/ezlibs-assets",
+        "assets/objects",
         ".",
         "assets/denim_b_tiles",
-        "assets/objects",
-        "assets/ezlibs-assets",
-        "areas"
+        "areas",
+        "assets/tiles"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -225,11 +225,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 2,
+            "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1162,
-                "y": 784.5
+                "x": 1118.3333333333333,
+                "y": 578.6666666666667
             }
         },
         "areas/ezlibs.tmx": {
@@ -272,8 +272,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1280,
-                "y": 640
+                "x": 1306.75,
+                "y": 580
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
@@ -371,15 +371,15 @@
     "map.width": 40,
     "openFiles": [
         "areas/default.tmx",
-        "areas/other_map.tmx",
-        "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx"
+        "areas/other_map.tmx"
     ],
     "project": "server.tiled-project",
-    "property.type": "string",
+    "property.type": "bool",
     "recentFiles": [
-        "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx",
         "areas/other_map.tmx",
         "areas/default.tmx",
+        "assets/objects/coffee.tsx",
+        "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx",
         "assets/objects/warp.tsx",
         "assets/objects/dish.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx",
@@ -387,7 +387,6 @@
         "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1708225914-%2Fserver%2Fassets%2Fdenim_b_tiles%2Fovernet-stairs-denim.tsx",
         "assets/denim_b_tiles/overnet-stairs-denim.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-2b.tsx",
-        "assets/objects/coffee.tsx",
         "areas/olddefault.tmx"
     ],
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",

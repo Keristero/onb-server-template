@@ -12,7 +12,8 @@ return {
         },
         [3]={
             name='loop',
-            type='bool'
+            type='bool',
+            optional=true
         }
     }
 }

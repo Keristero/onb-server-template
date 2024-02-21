@@ -8,12 +8,13 @@ return {
         },
         [2]={
             name='reason',
-            type='string'
+            type='string',
+            default=''
         },
         [3]={
             name='warp_out',
             type='boolean',
-            default=true
+            optional=true
         }
     }
 }

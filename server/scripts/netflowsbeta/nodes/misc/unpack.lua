@@ -1,13 +1,3 @@
-local colors = {
-    none = '\27[0m',
-    red = '\27[31m',
-    green = '\27[32m',
-    yellow = '\27[33m',
-    blue = '\27[34m',
-    magenta = '\27[35m',
-    cyan = '\27[36m'
-}
-
 return {
     global_object = 'Net',
     description = 'specify an table type value from the context, its values will be added to the context, you can also specify new name mappings for each unpacked value. the original table will be removed from the context.',

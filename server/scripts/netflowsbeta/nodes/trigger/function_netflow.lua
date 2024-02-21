@@ -14,6 +14,7 @@ return {
             local triggers = NetCached.get_cached_objects_by_class(area_id,'function_netflow')
             for key, object in pairs(triggers) do
                 local function_name = object.custom_properties.function_name
+                object.custom_properties.__execution_area_id = area_id
                 if not function_netflows_by_name[function_name] then
                     function_netflows_by_name[function_name] = {}
                 end

@@ -12,12 +12,13 @@ return {
         },
         [2]={
             name='character_limit',
-            type='int'
+            type='int',
+            optional=true
         },
         [3]={
             name='default_text',
             type='string',
-            default=''
+            optional=true
         }
     }
 }

@@ -14,6 +14,8 @@ function NetCached.cache_supported_classes(classes)
             local class_definition = classes[object.class]
             if class_definition then
                 if class_definition.category ~= 'tile' then
+                    --record this objects area on the object
+                    object.__execution_area_id = area_id
                     --add to the area cache
                     if not NetCached.cache[area_id] then
                         NetCached.cache[area_id] = {}
@@ -52,8 +54,6 @@ function NetCached.get_cached_objects_by_class(area_id,class_name)
 end
 
 function NetCached.get_object_by_id(area_id, object_id)
-    area_id = tostring(area_id)
-    object_id = tostring(object_id)
     --same as Net.get_object_by_id except it uses objects from a cache and caches them if they are not already cached
     if NetCached.cache[area_id] then
         if NetCached.cache[area_id][object_id] then

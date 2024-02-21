@@ -8,8 +8,8 @@ return {
         },
         [2]={
             name='warp_out',
-            type='boolean',
-            default=true
+            type='bool',
+            optional=true
         },
     },
     after_execute_func = function (node,context)

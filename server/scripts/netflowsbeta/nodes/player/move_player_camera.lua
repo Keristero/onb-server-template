@@ -20,7 +20,8 @@ return {
         },
         [5]={
             name='holdTimeInSeconds',
-            type='float'
+            type='float',
+            optional=true
         }
     }
 }

@@ -18,29 +18,31 @@ return {
         [4]={
             name='x',
             type='float',
-            default=0
+            optional=true
         },
         [5]={
             name='y',
             type='float',
-            default=0
+            optional=true
         },
         [6]={
             name='z',
             type='float',
-            default=0
+            optional=true
         },
         [7]={
             name='direction',
             type='string',
             propertyType='Direction',
             default="Down",
-            custom_property="Direction"
+            custom_property="Direction",
+            optional=true
         },
         [8]={
             name='target_object_id',
             type='int',
-            copy_from_target='transfer_details'
+            copy_from_target='transfer_details',
+            use_area_id = true
         }
     }
 }

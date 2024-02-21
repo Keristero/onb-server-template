@@ -48,13 +48,15 @@ function copy_mapped_keys_to_target(target,object,definition)
         local arg_name = argument_docs.name
         local property_name = argument_docs.property or arg_name
         local custom_property_name = argument_docs.custom_property_name or arg_name
-        local defined_custom_property = object.custom_properties[custom_property_name]
-        if defined_custom_property then
-            target[arg_name] = defined_custom_property
-        end
+        --copy value from object property
         local defined_property = object[property_name]
         if defined_property then
             target[arg_name] = defined_property
+        end
+        --but proritize using the custom property if it exists
+        local defined_custom_property = object.custom_properties[custom_property_name]
+        if defined_custom_property then
+            target[arg_name] = defined_custom_property
         end
     end
 end
@@ -70,7 +72,11 @@ function load_context(object,context,definition)
             local sub_definition = classes[argument.copy_from_target]
             local target_object_id = context[argument.name]
             if target_object_id then
-                local target_object = NetCached.get_object_by_id(context.area_id,target_object_id)
+                local node_area = object.__execution_area_id or context.area_id
+                if argument.use_area_id then
+                    node_area = context.area_id
+                end
+                local target_object = NetCached.get_object_by_id(node_area,target_object_id)
                 copy_mapped_keys_to_target(context,target_object,sub_definition)
             end
         end
@@ -89,11 +95,17 @@ function copy_arguments_from_context(context,arguments,ignore_missing,use_real_n
             if argument_docs.type == "float" or argument_docs.type == "int" then
                 value = tonumber(value)
             end
+            if argument_docs.type == "bool" then
+                value = value == "true"
+            end
             if not value then
-                if argument_docs.default == nil and not ignore_missing then
+                if argument_docs.default == nil and not argument_docs.optional and not ignore_missing then
                     error('mandatory argument missing ('..argument_docs.name..')!')
                 end
                 value = argument_docs.default
+            end
+            if value == nil then
+                value = "nil"
             end
             if use_real_names then
                 arg_table[argument_docs.name] = value
@@ -115,6 +127,12 @@ function execute_action(object,context,definition)
         local args = copy_arguments_from_context(context,definition.arguments)
         local target_function = _ENV[definition.global_object][definition.function_name]
         local result
+        --support unpacking nil
+        for i, v in ipairs(args) do
+            if v == 'nil' then
+                args[i] = nil
+            end
+        end
         if definition.global_object == "Async" then
             if definition.override_func then
                 result = await(definition.override_func(object,context))
@@ -147,8 +165,9 @@ function netflow(previous_node,context,node_id)
             --no node to flow to
             return
         end
-        --find the node
-        local current_node = NetCached.get_object_by_id(new_context.area_id, current_node_id)
+        --find the node, normally we use the previous node to find the area
+        local node_area = previous_node.__execution_area_id or context.area_id
+        local current_node = NetCached.get_object_by_id(node_area,current_node_id)
         if not current_node then
             return
         end

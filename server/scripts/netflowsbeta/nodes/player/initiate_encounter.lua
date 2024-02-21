@@ -12,7 +12,8 @@ return {
         },
         [3]={
             name='data',
-            type='object'
+            type='object',
+            optional=true
         }
     }
 }

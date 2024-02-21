@@ -12,29 +12,28 @@ return {
         },
         [2]={
             name='option_a',
-            type='string'
+            type='string',
+            optional=true
         },
         [3]={
             name='option_b',
-            type='string'
+            type='string',
+            optional=true
         },
         [4]={
             name='option_c',
-            type='string'
-        },
-        [5]={
-            name='option_d',
-            type='string'
+            type='string',
+            optional=true
         },
         [6]={
             name='mug_texture_path',
             type='string',
-            default=''
+            optional=true
         },
         [7]={
             name='mug_animation_path',
             type='string',
-            default=''
+            optional=true
         },
     },
     handlers = {
@@ -64,16 +63,6 @@ return {
             setup = function(current_node,context)
                 if context.prompt_answer == 2 then
                     local next_node_id = current_node.custom_properties.on_c
-                    return netflow(current_node,context,next_node_id)
-                end
-            end
-        },
-        [4]={
-            name='on_d',
-            type='object',
-            setup = function(current_node,context)
-                if context.prompt_answer == 3 then
-                    local next_node_id = current_node.custom_properties.on_d
                     return netflow(current_node,context,next_node_id)
                 end
             end

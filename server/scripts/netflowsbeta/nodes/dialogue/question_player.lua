@@ -17,12 +17,12 @@ return {
         [3]={
             name='mug_texture_path',
             type='string',
-            default=''
+            optional=true
         },
         [4]={
             name='mug_animation_path',
             type='string',
-            default=''
+            optional=true
         },
     },
     handlers = {
