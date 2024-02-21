@@ -1,5 +1,5 @@
 return {
-    global_object = 'Net',
+    global_object = 'Async',
     description = 'start an encounter for a player',
     arguments = {
         [1]={
@@ -9,10 +9,8 @@ return {
         [2]={
             name='package_path',
             type='string'
-        }
-    },
-    handlers = {
-        [1]={
+        },
+        [3]={
             name='data',
             type='object'
         }
