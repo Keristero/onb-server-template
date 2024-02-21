@@ -8,6 +8,13 @@ return {
                 context[key] = value
             end
         end
+        --add a callback if we have a callback handler
+        local on_callback_next_id = node.custom_properties['_on_callback']
+        if on_callback_next_id then
+            context.function_caller_callback = function (return_context)
+                return netflow(node,return_context,on_callback_next_id)
+            end
+        end
         Net:emit('function_netflow_call',context)
     end,
     arguments = {
@@ -15,5 +22,11 @@ return {
             name='function_name',
             type='string'
         }
-    }
+    },
+    handlers = {
+        [1]={
+            name='_on_callback',
+            type='object'
+        }
+    },
 }
