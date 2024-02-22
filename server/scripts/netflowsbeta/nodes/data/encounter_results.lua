@@ -1,7 +1,7 @@
 return {
     global_object = '',
     description = '',
-    handlers = {
+    arguments = {
         [1]={
             name='player_id',
             type='string'

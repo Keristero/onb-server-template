@@ -36,21 +36,24 @@ return {
         table.insert(print_out,"\27[0m")
         print(table.unpack(print_out))
     end,
-    handlers = {
+    arguments = {
         [1]={
             name='print_label',
             type='string',
-            default=''
+            default='',
+            optional=true
         },
         [2]={
             name='print_context',
             type='boolean',
-            default=false
+            default=false,
+            optional=true
         },
         [3]={
             name='print_node',
             type='boolean',
-            default=false
+            default=false,
+            optional=true
         },
         [4]={
             name='console_color',
@@ -60,7 +63,8 @@ return {
         },
         [5]={
             name='print_parameter',
-            type='string'
+            type='string',
+            optional=true
         }
     }
 }

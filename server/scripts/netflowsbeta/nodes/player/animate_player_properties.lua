@@ -62,14 +62,15 @@ return {
         [1]={
             name='player_id',
             type='string'
-        }
+        },
+        [2]={
+            name='first_keyframe_details',
+            type='object',
+            optional=true,
+        },
     },
     handlers = {
         [1]={
-            name='first_keyframe_details',
-            type='object'
-        },
-        [2]={
             name='on_animation_duration_elapsed',
             type='object'
         },
