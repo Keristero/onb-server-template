@@ -36,7 +36,7 @@ return {
             local keyframe_details = NetCached.get_object_by_id(context.area_id,next_keyframe_id)
             local keyframe_details_values = NetCached.get_object_by_id(context.area_id,keyframe_details.custom_properties._keyframe_detail_values)
             local properties = {}
-            for index, arg in pairs(Keyframe_detail_handlers) do
+            for index, arg in pairs(Keyframe_arguments) do
                 if arg.anim_conversion ~= nil then
                     try_add_property(keyframe_details.custom_properties,keyframe_details_values,arg,properties)
                 end
