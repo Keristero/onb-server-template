@@ -3,6 +3,21 @@ local table_gen = require('scripts/netflowsbeta/libs/table_gen')
 
 local distinct_colors = {'#e6194B', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#42d4f4', '#f032e6', '#bfef45', '#fabed4', '#469990', '#dcbeff', '#9A6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#a9a9a9', '#ffffff', '#000000'}
 
+local category_colors = {
+    area='#ffe119',
+    trigger='#e6194B',
+    misc='#f032e6',
+    flow='#f58231',
+    bot='#42d4f4',
+    player='#3cb44b',
+    dialogue='#d4c9ba',
+    data='#000075',
+    object='#aaffc3',
+    storage='#800000',
+    tile='#911eb4'
+}
+
+
 local hardcoded_enums = {
     {
         name='Direction',
@@ -166,7 +181,7 @@ local function document_return(return_doc)
     return parameters
 end
 
-exporters.export_readme = function(nodes,readme_path,category_colors)
+exporters.export_readme = function(nodes,readme_path)
     return async(function ()
         local txt = ""
         --sort node by category
@@ -209,7 +224,6 @@ exporters.export_readme = function(nodes,readme_path,category_colors)
 end
 
 exporters.export_tiled_types = function(nodes,property_types_path,project_path)
-    local category_colors = {}
     local output = {}
     local id_index = 1
     --add enums first
@@ -230,9 +244,6 @@ exporters.export_tiled_types = function(nodes,property_types_path,project_path)
             members={}
         }
         --pick a color
-        if not category_colors[doc.category] then
-            category_colors[doc.category] = table.remove(distinct_colors,  1)
-        end
         new_type.color = category_colors[doc.category]
 
         --add member for all categories, except data
@@ -277,9 +288,10 @@ exporters.export_tiled_types = function(nodes,property_types_path,project_path)
         id_index = id_index + 1
         table.insert(output,new_type)
     end
-    update_property_types_json(property_types_path,output)
-    update_tiled_project(project_path,output)
-    return category_colors
+    return async(function ()
+        await(update_property_types_json(property_types_path,output))
+        await(update_tiled_project(project_path,output))
+    end)
 end
 
 return exporters

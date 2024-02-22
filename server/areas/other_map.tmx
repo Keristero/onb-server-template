@@ -111,7 +111,7 @@
    </properties>
    <point/>
   </object>
-  <object id="14" name="question_response_text (callback)" type="function_netflow_callback" x="488" y="312">
+  <object id="14" name="question_response_text (callback)" type="function_netflow_callback" x="496" y="328">
    <point/>
   </object>
   <object id="16" name="map (prompt_answer to message)" type="map" x="496" y="368">
@@ -121,7 +121,7 @@
    </properties>
    <point/>
   </object>
-  <object id="17" name="save" type="save_variable" x="496" y="400">
+  <object id="17" name="save" type="save_variable" x="496" y="392">
    <properties>
     <property name="_then" type="object" value="16"/>
     <property name="saved_variable_name" value="question_response_answer"/>
@@ -132,17 +132,10 @@
   </object>
   <object id="18" name="load" type="load_variable" x="496" y="456">
    <properties>
-    <property name="_then" type="object" value="19"/>
+    <property name="_then" type="object" value="10"/>
     <property name="saved_variable_name" value="question_response_answer"/>
     <property name="unique_to_player_secret" type="bool" value="true"/>
     <property name="variable_name" value="default_text"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="19" name="print" type="print" x="536" y="456">
-   <properties>
-    <property name="_then" type="object" value="10"/>
-    <property name="print_context" type="bool" value="true"/>
    </properties>
    <point/>
   </object>

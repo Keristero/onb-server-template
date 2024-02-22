@@ -40,8 +40,8 @@ end
 NetCached.cache_supported_classes(classes)
 
 --export tiled map editor type definitions
-local category_colors = exporters.export_tiled_types(classes,'scripts/netflowsbeta/propertytypes.json','server.tiled-project')
-exporters.export_readme(classes,'readme.md',category_colors)
+exporters.export_tiled_types(classes,'scripts/netflowsbeta/propertytypes.json','server.tiled-project')
+exporters.export_readme(classes,'readme.md')
 
 function copy_mapped_keys_to_target(target,object,definition)
     for arg_index, argument_docs in pairs(definition.arguments) do
