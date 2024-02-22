@@ -4,3 +4,6 @@
 [submodule "sources/Scriptable-OpenNetBattle-Server"]
 	path = sources/Scriptable-OpenNetBattle-Server
 	url = https://github.com/TheMaverickProgrammer/Scriptable-OpenNetBattle-Server
+[submodule "server/scripts/netflows"]
+	path = server/scripts/netflows
+	url = https://github.com/Keristero/netflows
