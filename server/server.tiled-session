@@ -365,7 +365,7 @@
     "frame.defaultDuration": 100,
     "last.externalTilesetPath": "C:/Users/Keris/Documents/Repos/ONB/onb-server-template/server/assets/ezlibs-assets/ezcheckpoints",
     "last.imagePath": "C:/Users/Keris/Documents/Repos/ONB/onb-server-template/server/assets/ezlibs-assets/ezcheckpoints",
-    "last.objectTypesPath": "C:/Users/Keris/Documents/Repos/ONB/onb-server-template/server/scripts/netflowsbeta/propertytypes.json",
+    "last.objectTypesPath": "C:/Users/Keris/Documents/Repos/ONB/onb-server-template/server/scripts/netflows/propertytypes.json",
     "map.height": 40,
     "map.lastUsedFormat": "tmx",
     "map.orientation": null,
