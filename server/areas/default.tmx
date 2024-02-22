@@ -88,6 +88,7 @@
   </object>
   <object id="12" type="Interactable" gid="30" x="464" y="720" width="33" height="54">
    <properties>
+    <property name="_then" type="object" value="13"/>
     <property name="on_object_interaction" type="object" value="148"/>
    </properties>
   </object>
@@ -372,9 +373,9 @@
   </object>
   <object id="82" name="call send_player_mugshot_message" type="call_function_netflow" x="664" y="800">
    <properties>
-    <property name="_on_callback" type="object" value="145"/>
     <property name="function_name" value="question_response_text"/>
     <property name="message" value="What is the meaning of life?"/>
+    <property name="on_callback" type="object" value="145"/>
    </properties>
    <point/>
   </object>
@@ -603,15 +604,6 @@
    <properties>
     <property name="on_object_interaction" type="object" value="82"/>
    </properties>
-  </object>
-  <object id="148" name="print" type="print" x="504" y="792">
-   <properties>
-    <property name="_then" type="object" value="13"/>
-    <property name="console_color" propertytype="console_color" value="yellow"/>
-    <property name="print_context" type="bool" value="true"/>
-    <property name="print_label" value="Pre unpack context"/>
-   </properties>
-   <point/>
   </object>
   <object id="150" type="Custom Warp" gid="213" x="448" y="576" width="61" height="32">
    <properties>

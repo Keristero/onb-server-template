@@ -1,7 +1,7 @@
 return {
     global_object = 'Net',
     description = 'can be triggered by any call_function node with a matching function_name',
-    handlers = {
+    arguments = {
         [1]={
             name='function_name',
             type='string'

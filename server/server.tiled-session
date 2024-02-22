@@ -228,8 +228,8 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1076.3333333333333,
-                "y": 278
+                "x": 1279.6666666666665,
+                "y": 631.3333333333333
             }
         },
         "areas/ezlibs.tmx": {
@@ -272,8 +272,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1303.75,
-                "y": 532
+                "x": 1388.75,
+                "y": 508
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {

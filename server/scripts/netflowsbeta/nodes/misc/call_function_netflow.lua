@@ -9,7 +9,7 @@ return {
             end
         end
         --add a callback if we have a callback handler
-        local on_callback_next_id = node.custom_properties['_on_callback']
+        local on_callback_next_id = node.custom_properties['on_callback']
         if on_callback_next_id then
             context.function_caller_callback = function (return_context)
                 return netflow(node,return_context,on_callback_next_id)
@@ -25,7 +25,7 @@ return {
     },
     handlers = {
         [1]={
-            name='_on_callback',
+            name='on_callback',
             type='object'
         }
     },
