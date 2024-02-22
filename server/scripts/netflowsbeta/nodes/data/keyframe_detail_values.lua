@@ -37,7 +37,7 @@ return {
         [9]={
             name='Direction',
             type='string',
-            propertyType='Direction'
+            enum='Direction'
         },
         [10]={
             name='Sound Effect',

@@ -9,7 +9,7 @@ return {
         [2]={
             name='object_details',
             type='object',
-            copy_from_target='object_details'
+            copy_from_target_class='object_details'
         }
     }
 }

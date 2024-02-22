@@ -33,7 +33,7 @@ return {
         [7]={
             name='direction',
             type='string',
-            propertyType='Direction',
+            enum='Direction',
             default="Down",
             custom_property="Direction",
             optional=true
@@ -41,7 +41,7 @@ return {
         [8]={
             name='target_object_id',
             type='int',
-            copy_from_target='transfer_details',
+            copy_from_target_class='transfer_details',
             use_area_id = true
         }
     }

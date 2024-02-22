@@ -43,7 +43,7 @@ return {
         [9]={
             name='direction',
             type='string',
-            propertyType='Direction',
+            enum='Direction',
             default="Down Left",
             custom_property="Direction",
         },

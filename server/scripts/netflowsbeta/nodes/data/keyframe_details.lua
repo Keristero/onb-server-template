@@ -10,71 +10,71 @@ Keyframe_detail_handlers = {
     [1]={
         name='Animation',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         default_value="Linear",
         anim_conversion=tostring
     },
     [2]={
         name='Animation Speed',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=tonumber
     },
     [3]={
         name='X',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=tonumber,
         special_name='x'
     },
     [4]={
         name='Y',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=tonumber,
         special_name='y'
     },
     [5]={
         name='Z',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=tonumber,
         special_name='z'
     },
     [6]={
         name='ScaleX',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=tonumber
     },
     [7]={
         name='ScaleY',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=tonumber
     },
     [8]={
         name='Rotation',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=tonumber
     },
     [9]={
         name='Direction',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=tostring
     },
     [10]={
         name='Sound Effect',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=tostring
     },
     [11]={
         name='Sound Effect Loop',
         type='string',
-        propertyType='EasingType',
+        enum='EasingType',
         anim_conversion=toboolean
     },
     [12]={

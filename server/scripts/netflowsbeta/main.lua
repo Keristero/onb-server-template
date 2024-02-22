@@ -68,8 +68,8 @@ function load_context(object,context,definition)
     copy_mapped_keys_to_target(context,object,definition)
     --copy any values that we need to copy from other objects
     for key, argument in pairs(definition.arguments) do
-        if argument.copy_from_target then
-            local sub_definition = classes[argument.copy_from_target]
+        if argument.copy_from_target_class then
+            local sub_definition = classes[argument.copy_from_target_class]
             local target_object_id = context[argument.name]
             if target_object_id then
                 local node_area = object.__execution_area_id or context.area_id
@@ -90,7 +90,7 @@ function copy_arguments_from_context(context,arguments,ignore_missing,use_real_n
     end
     for index, _ in ipairs(arguments) do
         local argument_docs = arguments[index]
-        if not argument_docs.copy_from_target then
+        if not argument_docs.copy_from_target_class then
             local value = context[argument_docs.name]
             if argument_docs.type == "float" or argument_docs.type == "int" then
                 value = tonumber(value)
@@ -114,7 +114,7 @@ function copy_arguments_from_context(context,arguments,ignore_missing,use_real_n
             end
         else
             --copy from target is used to load details from other targets, like bot_details for create_bot
-            local sub_definition = classes[argument_docs.copy_from_target]
+            local sub_definition = classes[argument_docs.copy_from_target_class]
             table.insert(arg_table,copy_arguments_from_context(context,sub_definition.arguments,true,true))
         end
     end

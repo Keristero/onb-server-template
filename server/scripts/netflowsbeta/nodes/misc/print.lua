@@ -55,7 +55,7 @@ return {
         [4]={
             name='console_color',
             type='string',
-            propertyType='console_color',
+            enum='console_color',
             default="yellow"
         },
         [5]={

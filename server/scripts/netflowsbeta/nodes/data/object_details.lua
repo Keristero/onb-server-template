@@ -49,12 +49,12 @@ return {
         [10]={
             name='data',
             type='object',
-            copy_from_target='data'
+            copy_from_target_class='data'
         },
         [11]={
             name='custom_properties',
             type='object',
-            copy_from_target='custom_properties'
+            copy_from_target_class='custom_properties'
         },
     }
 }

@@ -33,7 +33,7 @@ return {
         [7]={
             name='direction',
             type='string',
-            propertyType='Direction',
+            enum='Direction',
             default="Down",
             custom_property="Direction"
         }

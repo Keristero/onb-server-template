@@ -9,7 +9,7 @@ return {
         [1]={
             name='bot',
             type='object',
-            copy_from_target='bot_details'
+            copy_from_target_class='bot_details'
         },
     },
     handlers = {

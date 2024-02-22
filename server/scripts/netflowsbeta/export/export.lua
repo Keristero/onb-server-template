@@ -46,6 +46,24 @@ local hardcoded_enums = {
             "Floor"
         },
         valuesAsFlags=false
+    },
+    {
+        name='Emotion',
+        storageType='int',
+        type='enum',
+        values={
+            "normal",
+            "full_synchro",
+            "angry",
+            "evil",
+            "anxious",
+            "tired",
+            "exhausted",
+            "pinch",
+            "focus",
+            "happy"
+        },
+        valuesAsFlags=false
     }
 }
 
@@ -105,7 +123,7 @@ function update_tiled_project(tiled_project_path, tiled_types)
     return async(function ()
         local project_json = await(Async.read_file(tiled_project_path))
         local project = json.decode(project_json)
-        project.propertyTypes = tiled_types
+        project.enums = tiled_types
         await(Async.write_file(tiled_project_path,json.encode(project)))
     end)
 end
@@ -116,6 +134,15 @@ local function document_parameters(collection)
         parameters = parameters..'<pre>'
         for i, arg in ipairs(collection) do
             local arg_text = arg.name
+            if arg.list == true then
+                arg_text = arg_text.."[]"
+            end
+            if arg.optional == true then
+                arg_text = arg_text.."?"
+            end
+            if arg.copy_from_target_class then
+                arg_text = arg_text.." ["..arg.copy_from_target_class.."](#"..arg.copy_from_target_class..")"
+            end
             parameters = parameters..arg_text..'<br>'
         end
         parameters = parameters..'</pre>'
@@ -158,7 +185,8 @@ exporters.export_readme = function(nodes,readme_path,category_colors)
                 section_text = section_text..''..section.short_description..'\n\n'
 
                 for name, node_def in pairs(category[section.nodes_of_category]) do
-                    local row = {node_def.function_name,node_def.description,document_parameters(node_def.arguments),document_parameters(node_def.handlers),document_return(node_def.return_value)}
+                    local name = node_def.function_name..'<a id="'..node_def.function_name..'"></a>'
+                    local row = {name,node_def.description,document_parameters(node_def.arguments),document_parameters(node_def.handlers),document_return(node_def.return_value)}
                     table.insert(rows,row)
                 end
 
@@ -218,8 +246,8 @@ exporters.export_tiled_types = function(nodes,project_path)
                     type=arg_doc.type,
                     value=arg_doc.default
                 }
-                if arg_doc.propertyType then
-                    new_arg.propertyType = arg_doc.propertyType
+                if arg_doc.enum then
+                    new_arg.propertyType = arg_doc.enum--name for enum in tiled
                 end
                 table.insert(new_type.members,new_arg)
             end
@@ -233,8 +261,8 @@ exporters.export_tiled_types = function(nodes,project_path)
                     type=handler_doc.type,
                     value=handler_doc.default
                 }
-                if handler_doc.propertyType then
-                    new_arg.propertyType = handler_doc.propertyType
+                if handler_doc.enum then
+                    new_arg.enum = handler_doc.enum
                 end
                 table.insert(new_type.members,new_arg)
             end

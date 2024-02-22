@@ -7,11 +7,11 @@
     "expandedProjectPaths": [
         "assets",
         "assets/ezlibs-assets",
+        "assets/tiles",
+        "areas",
         "assets/objects",
         ".",
-        "assets/denim_b_tiles",
-        "areas",
-        "assets/tiles"
+        "assets/denim_b_tiles"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -272,8 +272,8 @@
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1402.25,
-                "y": 469
+                "x": 1353.25,
+                "y": 506.5
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
@@ -374,7 +374,7 @@
         "areas/other_map.tmx"
     ],
     "project": "server.tiled-project",
-    "property.type": "bool",
+    "property.type": "Direction",
     "recentFiles": [
         "areas/default.tmx",
         "areas/other_map.tmx",

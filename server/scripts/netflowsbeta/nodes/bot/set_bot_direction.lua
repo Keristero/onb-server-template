@@ -9,7 +9,7 @@ return {
         [2]={
             name='direction',
             type='string',
-            propertyType='Direction',
+            enum='Direction',
             default="Down"
         }
     }

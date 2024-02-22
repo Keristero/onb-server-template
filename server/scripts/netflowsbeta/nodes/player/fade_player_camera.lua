@@ -9,7 +9,7 @@ return {
         [2]={
             name='color',
             type='object',
-            copy_from_target='color_details'
+            copy_from_target_class='color_details'
         },
         [3]={
             name='durationInSeconds',
