@@ -5,8 +5,8 @@ plugin for OpenNetBattle servers, this plugin lets you create all kinds of inter
 
 ### example uses
 *most of these are not possible yet, but this is the vision*
-- trigger a cutscene with all the movements and events defined in the map editor.
-- every 10 seconds spawn a bot which follows a path until the end where it despawns
+- trigger a cutscene with all the movements and events defined in the map editor. ✅
+- every 10 seconds spawn a bot which follows a path until the end where it despawns ✅
 - add simple interact text to objects ✅
 - when a player joins the server, send them to a particular location
 - when a player presses R, open a menu BBS with many options, trigger any action when any of these are selected.
@@ -18,11 +18,8 @@ simply copy the `netflows` folder into your server folder, eg: `server/scripts/n
 
 ### Usage
 #### tiled setup
-*note, the following instructions are not correct yet, currently the tile definitions are in the example server.tiled-project in the `onb-server-template` ezlibs2 branch*
-
-import the custom types from `netflows/custom_types` into your tiled edtior from the toolbar **view** -> **custom types** -> **import**
-
-this will give you a complete list of all the classes supported by this library, when you create a object in tiled you will be able to select a class
+import the custom types from `netflows/propertytypes.json` into your tiled edtior from the toolbar **view** -> **custom types** -> **import**
+you will need to redo this step whenever netflows is updated for the latest information.
 
 #### process
 TBD

@@ -128,6 +128,12 @@ function update_tiled_project(tiled_project_path, tiled_types)
     end)
 end
 
+function update_property_types_json(property_types_path, tiled_types)
+    return async(function ()
+        await(Async.write_file(property_types_path,json.encode(tiled_types)))
+    end)
+end
+
 local function document_parameters(collection)
     local parameters = ''
     if collection then
@@ -202,7 +208,7 @@ exporters.export_readme = function(nodes,readme_path,category_colors)
     end)
 end
 
-exporters.export_tiled_types = function(nodes,project_path)
+exporters.export_tiled_types = function(nodes,property_types_path,project_path)
     local category_colors = {}
     local output = {}
     local id_index = 1
@@ -271,6 +277,7 @@ exporters.export_tiled_types = function(nodes,project_path)
         id_index = id_index + 1
         table.insert(output,new_type)
     end
+    update_property_types_json(property_types_path,output)
     update_tiled_project(project_path,output)
     return category_colors
 end
