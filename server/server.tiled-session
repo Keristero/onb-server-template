@@ -5,14 +5,14 @@
     },
     "activeFile": "areas/other_map.tmx",
     "expandedProjectPaths": [
+        "templates",
+        "assets/objects",
+        "assets/ezlibs-assets",
+        "areas",
         ".",
         "assets/tiles",
-        "assets/objects",
-        "areas",
-        "assets/denim_b_tiles",
         "assets",
-        "assets/ezlibs-assets",
-        "templates"
+        "assets/denim_b_tiles"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -226,11 +226,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1.5,
+            "scale": 3,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1114,
-                "y": 488.66666666666663
+                "x": 1395.1666666666665,
+                "y": 654.5
             }
         },
         "areas/ezlibs.tmx": {
@@ -270,11 +270,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 2,
+            "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1247,
-                "y": 548.5
+                "x": 991.6666666666666,
+                "y": 769.6666666666667
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
@@ -328,6 +328,16 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "assets/objects/BlueMysteryData.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/objects/GreenMysteryData.tsx": {
+            "scaleInEditor": 1
+        },
+        "assets/objects/PurpleMysteryData.tsx": {
+            "scaleInEditor": 1
+        },
         "assets/objects/coffee.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
@@ -373,11 +383,15 @@
     "map.width": 40,
     "openFiles": [
         "areas/default.tmx",
-        "areas/other_map.tmx"
+        "areas/other_map.tmx",
+        "assets/objects/BlueMysteryData.tsx"
     ],
     "project": "server.tiled-project",
     "property.type": "string",
     "recentFiles": [
+        "assets/objects/GreenMysteryData.tsx",
+        "assets/objects/BlueMysteryData.tsx",
+        "assets/objects/PurpleMysteryData.tsx",
         "areas/default.tmx",
         "areas/other_map.tmx",
         "assets/objects/coffee.tsx",
@@ -386,10 +400,7 @@
         "assets/objects/dish.tsx",
         "assets/denim_b_tiles/cybernet-floors-denim-0b.tsx",
         "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1683436961-%2Fserver%2Fassets%2Fobjects%2Fcoffee.tsx",
-        "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1708225914-%2Fserver%2Fassets%2Fdenim_b_tiles%2Fovernet-stairs-denim.tsx",
-        "assets/denim_b_tiles/overnet-stairs-denim.tsx",
-        "assets/denim_b_tiles/cybernet-floors-denim-2b.tsx",
-        "areas/olddefault.tmx"
+        "C:/Users/Keris/Documents/Repos/ONB/ONBGameClients/LatestA/cache/127.0.0.1_p8765/cached-1708225914-%2Fserver%2Fassets%2Fdenim_b_tiles%2Fovernet-stairs-denim.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",

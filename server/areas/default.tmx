@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="173">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="181">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/home_warp.tsx"/>
  <tileset firstgid="30" source="../assets/objects/coffee.tsx"/>
@@ -8,6 +8,9 @@
  <tileset firstgid="68" source="../assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"/>
  <tileset firstgid="212" source="../assets/objects/warp.tsx"/>
  <tileset firstgid="218" source="../assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx"/>
+ <tileset firstgid="266" source="../assets/objects/GreenMysteryData.tsx"/>
+ <tileset firstgid="274" source="../assets/objects/BlueMysteryData.tsx"/>
+ <tileset firstgid="282" source="../assets/objects/PurpleMysteryData.tsx"/>
  <layer id="1" name="Tile Layer 1" class="Home Warp" width="40" height="40" opacity="0.9">
   <properties>
    <property name="Direction" value="Down"/>
@@ -30,10 +33,10 @@
 0,0,0,0,0,0,0,0,0,0,0,7,7,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,7,7,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,23,23,23,11,11,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,53,23,23,23,11,11,11,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,0,0,0,0,0,0,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,23,0,0,19,19,19,0,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,23,23,23,11,11,11,0,0,19,19,19,19,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,53,23,23,23,11,11,11,19,19,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,23,23,23,11,11,11,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,23,0,23,23,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,23,0,0,23,23,23,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -261,20 +264,20 @@
    </properties>
    <point/>
   </object>
-  <object id="62" name="start" type="on_start" x="584" y="608">
+  <object id="62" name="start" type="on_start" x="808" y="480">
    <properties>
     <property name="_then" type="object" value="63"/>
    </properties>
    <point/>
   </object>
-  <object id="63" name="create bot" type="create_bot" x="576" y="632">
+  <object id="63" name="create bot" type="create_bot" x="800" y="504">
    <properties>
     <property name="bot" type="object" value="64"/>
     <property name="on_actor_interaction" type="object" value="65"/>
    </properties>
    <point/>
   </object>
-  <object id="64" name="unpack example bot" type="bot_details" x="560" y="688">
+  <object id="64" name="unpack example bot" type="bot_details" x="784" y="560">
    <properties>
     <property name="animation_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/fireman-bn45.animation"/>
     <property name="name" value="prog"/>
@@ -282,7 +285,7 @@
    </properties>
    <point/>
   </object>
-  <object id="65" name="message player" type="message_player" x="624" y="672">
+  <object id="65" name="message player" type="message_player" x="848" y="544">
    <properties>
     <property name="_then" type="object" value="66"/>
     <property name="message" value="Whats cookin?"/>
@@ -291,20 +294,20 @@
    </properties>
    <point/>
   </object>
-  <object id="66" name="get player mugshot" type="get_player_mugshot" x="648" y="632">
+  <object id="66" name="get player mugshot" type="get_player_mugshot" x="872" y="504">
    <properties>
     <property name="_then" type="object" value="71"/>
    </properties>
    <point/>
   </object>
-  <object id="69" name="message_player" type="message_player" x="752" y="736">
+  <object id="69" name="message_player" type="message_player" x="976" y="608">
    <properties>
     <property name="_then" type="object" value="74"/>
     <property name="message" value="My mum!"/>
    </properties>
    <point/>
   </object>
-  <object id="70" name="unpack texture_details" type="unpack" x="744" y="640">
+  <object id="70" name="unpack texture_details" type="unpack" x="968" y="512">
    <properties>
     <property name="_then" type="object" value="72"/>
     <property name="animation_path" value="mug_animation_path"/>
@@ -313,7 +316,7 @@
    </properties>
    <point/>
   </object>
-  <object id="71" name="print" type="print" x="680" y="608">
+  <object id="71" name="print" type="print" x="904" y="480">
    <properties>
     <property name="_then" type="object" value="70"/>
     <property name="console_color" propertytype="console_color" value="yellow"/>
@@ -322,7 +325,7 @@
    </properties>
    <point/>
   </object>
-  <object id="72" name="print" type="print" x="768" y="688">
+  <object id="72" name="print" type="print" x="992" y="560">
    <properties>
     <property name="_then" type="object" value="69"/>
     <property name="console_color" propertytype="console_color" value="green"/>
@@ -331,7 +334,7 @@
    </properties>
    <point/>
   </object>
-  <object id="74" name="message_player" type="message_player" x="704" y="752">
+  <object id="74" name="message_player" type="message_player" x="928" y="624">
    <properties>
     <property name="message" value="oof! check the console for details on how unpack works"/>
     <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
@@ -635,6 +638,47 @@
   </object>
   <object id="154" type="Custom Warp" gid="213" x="392" y="624" width="61" height="32"/>
   <object id="172" name="callback" type="function_netflow_callback" x="184" y="520">
+   <point/>
+  </object>
+  <object id="173" type="Interactable" gid="274" x="592" y="592" width="14" height="43">
+   <properties>
+    <property name="on_object_interaction" type="object" value="174"/>
+   </properties>
+  </object>
+  <object id="174" name="call mystery_data" type="call_function_netflow" x="576" y="552">
+   <properties>
+    <property name="data_item_id" value="unlocker"/>
+    <property name="function_name" value="mystery_data"/>
+    <property name="mystery_type" value="blue"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="175" x="640" y="480"/>
+  <object id="176" x="664" y="480"/>
+  <object id="177" type="Interactable" gid="266" x="624" y="592" width="14" height="43">
+   <properties>
+    <property name="on_object_interaction" type="object" value="178"/>
+   </properties>
+  </object>
+  <object id="178" name="call mystery_data" type="call_function_netflow" x="616" y="544">
+   <properties>
+    <property name="data_money" type="int" value="200"/>
+    <property name="function_name" value="mystery_data"/>
+    <property name="mystery_type" value="green"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="179" type="Interactable" gid="282" x="656" y="592" width="14" height="43">
+   <properties>
+    <property name="on_object_interaction" type="object" value="180"/>
+   </properties>
+  </object>
+  <object id="180" name="call mystery_data" type="call_function_netflow" x="664" y="544">
+   <properties>
+    <property name="data_money" type="int" value="1000"/>
+    <property name="function_name" value="mystery_data"/>
+    <property name="mystery_type" value="purple"/>
+   </properties>
    <point/>
   </object>
  </objectgroup>

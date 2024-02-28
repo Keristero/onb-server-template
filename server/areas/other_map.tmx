@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="89">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="184">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/warp.tsx"/>
  <tileset firstgid="31" source="../assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"/>
  <tileset firstgid="175" source="../assets/objects/dish.tsx"/>
+ <tileset firstgid="177" source="../assets/objects/BlueMysteryData.tsx"/>
+ <tileset firstgid="185" source="../assets/objects/GreenMysteryData.tsx"/>
  <layer id="1" name="Tile Layer 1" width="40" height="40">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -432,6 +434,305 @@ The darker the better!!!</property>
   <object id="88" name="unlock camera" type="unlock_player_camera" x="608" y="200">
    <properties>
     <property name="_then" type="object" value="84"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="90" name="mystery_data" type="function_netflow" x="840" y="992">
+   <properties>
+    <property name="_then" type="object" value="127"/>
+    <property name="function_name" value="mystery_data"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="105" name="on start" type="on_start" x="432" y="800">
+   <properties>
+    <property name="_then" type="object" value="106"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="106" type="create_item" x="368" y="800">
+   <properties>
+    <property name="_then" type="object" value="131"/>
+    <property name="item_details" type="object" value="107"/>
+    <property name="item_id" value="dark_chip"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="107" type="item_details" x="304" y="800">
+   <properties>
+    <property name="description" value="Drkenrgy flows within!"/>
+    <property name="name" value="Dark Chip"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="109" name="remove mystery data" type="remove_object" x="224" y="968">
+   <point/>
+  </object>
+  <object id="111" name="item_id check" type="expression" x="504" y="992">
+   <properties>
+    <property name="_then" type="object" value="157"/>
+    <property name="expression" value="context.data_item_id ~= nil"/>
+    <property name="result_name" value="has_item_id"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="113" name="switch" type="switch" x="400" y="992">
+   <properties>
+    <property name="_default" type="object" value="151"/>
+    <property name="true" type="object" value="156"/>
+    <property name="variable_name" value="has_item_id"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="127" name="switch" type="switch" x="784" y="992">
+   <properties>
+    <property name="_default" type="object" value="138"/>
+    <property name="purple" type="object" value="129"/>
+    <property name="variable_name" value="mystery_type"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="129" name="locked message" type="message_player" x="776" y="912">
+   <properties>
+    <property name="_then" type="object" value="133"/>
+    <property name="message" value="The mystery data is locked..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="130" type="item_details" x="304" y="760">
+   <properties>
+    <property name="description" value="Use to unlocked purple mystery data"/>
+    <property name="name" value="Unlocker"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="131" type="create_item" x="368" y="760">
+   <properties>
+    <property name="item_details" type="object" value="130"/>
+    <property name="item_id" value="unlocker"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="133" name="item unlocker check" type="player_has_item" x="736" y="912">
+   <properties>
+    <property name="_then" type="object" value="134"/>
+    <property name="item_id" value="unlocker"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="134" name="switch" type="switch" x="688" y="912">
+   <properties>
+    <property name="true" type="object" value="135"/>
+    <property name="variable_name" value="player_has_item"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="135" name="unlock question" type="question_player" x="640" y="904">
+   <properties>
+    <property name="on_yes" type="object" value="180"/>
+    <property name="question" value="Use Unlocker to open it?"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="138" name="access message" type="message_player" x="592" y="992">
+   <properties>
+    <property name="_then" type="object" value="111"/>
+    <property name="message" value="Accessing mystery data..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="139" name="gift_item" type="function_netflow" x="336" y="1152">
+   <properties>
+    <property name="_then" type="object" value="159"/>
+    <property name="function_name" value="gift_item"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="140" name="gift_money" type="function_netflow" x="248" y="816">
+   <properties>
+    <property name="_then" type="object" value="146"/>
+    <property name="function_name" value="gift_money"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="146" name="get_player_money" type="get_player_money" x="208" y="816">
+   <properties>
+    <property name="_then" type="object" value="147"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="147" name="sum money" type="expression" x="168" y="816">
+   <properties>
+    <property name="_then" type="object" value="148"/>
+    <property name="expression" value="context.money + tonumber(context.gift_money)"/>
+    <property name="result_name" value="money"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="148" name="set_player_money" type="set_player_money" x="128" y="816">
+   <properties>
+    <property name="_then" type="object" value="163"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="149" name="prepare text" type="expression" x="56" y="816">
+   <properties>
+    <property name="_then" type="object" value="150"/>
+    <property name="expression" value="&quot;You got &quot;..context.gift_money..&quot;$!&quot;"/>
+    <property name="result_name" value="message"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="150" name="reward text" type="message_player" x="24" y="816">
+   <properties>
+    <property name="_then" type="object" value="161"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="151" name="call gift_money" type="call_function_netflow" x="336" y="896">
+   <properties>
+    <property name="function_name" value="gift_money"/>
+    <property name="on_callback" type="object" value="109"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="153" name="give_item" type="give_player_item" x="256" y="1152">
+   <properties>
+    <property name="_then" type="object" value="154"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="154" name="get_item_name" type="get_item_name" x="224" y="1152">
+   <properties>
+    <property name="_then" type="object" value="155"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="155" name="prepare text" type="expression" x="184" y="1152">
+   <properties>
+    <property name="_then" type="object" value="160"/>
+    <property name="expression" value="&quot;You got &quot;..context.item_name..&quot;!&quot;"/>
+    <property name="result_name" value="message"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="156" name="call gift_item" type="call_function_netflow" x="344" y="1072">
+   <properties>
+    <property name="function_name" value="gift_item"/>
+    <property name="on_callback" type="object" value="109"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="157" name="map" type="map" x="456" y="992">
+   <properties>
+    <property name="_then" type="object" value="113"/>
+    <property name="data_item_id" value="gift_item_id"/>
+    <property name="data_money" value="gift_money"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="159" name="map" type="map" x="288" y="1152">
+   <properties>
+    <property name="_then" type="object" value="153"/>
+    <property name="gift_item_id" value="item_id"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="160" name="reward text" type="message_player" x="152" y="1152">
+   <properties>
+    <property name="_then" type="object" value="165"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="161" name="callback" type="function_netflow_callback" x="-16" y="816">
+   <point/>
+  </object>
+  <object id="162" name="callback" type="function_netflow_callback" x="16" y="1152">
+   <point/>
+  </object>
+  <object id="163" name="save_money" type="save_variable" x="88" y="816">
+   <properties>
+    <property name="_then" type="object" value="149"/>
+    <property name="unique_to_player_secret" type="bool" value="true"/>
+    <property name="variable_name" value="money"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="164" name="save_keyitem" type="save_variable" x="56" y="1152">
+   <properties>
+    <property name="_then" type="object" value="162"/>
+    <property name="unique_to_player_secret" type="bool" value="true"/>
+    <property name="variable_name" value="keyitems"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="165" name="map" type="map" x="120" y="1152">
+   <properties>
+    <property name="_then" type="object" value="168"/>
+    <property name="item_id" value="table_key"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="168" name="save true" type="expression" x="88" y="1152">
+   <properties>
+    <property name="_then" type="object" value="164"/>
+    <property name="expression" value="true"/>
+    <property name="result_name" value="keyitems"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="170" name="remove_item" type="function_netflow" x="344" y="1224">
+   <properties>
+    <property name="_then" type="object" value="174"/>
+    <property name="function_name" value="remove_item"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="171" name="give_item" type="remove_player_item" x="264" y="1224">
+   <properties>
+    <property name="_then" type="object" value="178"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="174" name="map" type="map" x="296" y="1224">
+   <properties>
+    <property name="_then" type="object" value="171"/>
+    <property name="remove_item_id" value="item_id"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="176" name="callback" type="function_netflow_callback" x="72" y="1224">
+   <point/>
+  </object>
+  <object id="177" name="save_keyitem" type="save_variable" x="112" y="1224">
+   <properties>
+    <property name="_then" type="object" value="176"/>
+    <property name="unique_to_player_secret" type="bool" value="true"/>
+    <property name="variable_name" value="keyitems"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="178" name="map" type="map" x="216" y="1224">
+   <properties>
+    <property name="_then" type="object" value="179"/>
+    <property name="item_id" value="table_key"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="179" name="save true" type="expression" x="168" y="1224">
+   <properties>
+    <property name="_then" type="object" value="177"/>
+    <property name="expression" value="nil"/>
+    <property name="result_name" value="keyitems"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="180" name="call gift_item" type="call_function_netflow" x="584" y="896">
+   <properties>
+    <property name="discard_function_context" type="bool" value="true"/>
+    <property name="function_name" value="remove_item"/>
+    <property name="on_callback" type="object" value="138"/>
+    <property name="remove_item_id" value="unlocker"/>
    </properties>
    <point/>
   </object>
