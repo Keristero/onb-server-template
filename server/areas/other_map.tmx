@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="184">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="192">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/warp.tsx"/>
  <tileset firstgid="31" source="../assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"/>
@@ -87,14 +87,13 @@
   </object>
   <object id="8" name="message player" type="message_player" x="528" y="624">
    <properties>
-    <property name="_then" type="object" value="0"/>
     <property name="message" value="PROGGERS"/>
     <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
     <property name="mug_texture_path" value="/server/assets/ezlibs-assets/eznpcs/mug/prog.png"/>
    </properties>
    <point/>
   </object>
-  <object id="10" name="prompt_player" type="prompt_player" x="376" y="520">
+  <object id="10" name="prompt_player" type="prompt_player" x="368" y="472">
    <properties>
     <property name="_then" type="object" value="17"/>
    </properties>
@@ -102,28 +101,25 @@
   </object>
   <object id="11" name="question_response_text (function_netflow)" type="function_netflow" x="376" y="632">
    <properties>
-    <property name="_then" type="object" value="13"/>
+    <property name="_then" type="object" value="189"/>
     <property name="function_name" value="question_response_text"/>
    </properties>
    <point/>
   </object>
-  <object id="13" name="message_player" type="message_player" x="376" y="592">
+  <object id="13" name="message_player" type="message_player" x="368" y="552">
    <properties>
     <property name="_then" type="object" value="18"/>
    </properties>
    <point/>
   </object>
-  <object id="14" name="question_response_text (callback)" type="function_netflow_callback" x="376" y="424">
-   <point/>
-  </object>
-  <object id="16" name="map (prompt_answer to message)" type="map" x="376" y="464">
+  <object id="16" name="map (prompt_answer to message)" type="map" x="368" y="416">
    <properties>
-    <property name="_then" type="object" value="14"/>
+    <property name="_then" type="object" value="188"/>
     <property name="prompt_answer" value="message"/>
    </properties>
    <point/>
   </object>
-  <object id="17" name="save" type="save_variable" x="376" y="488">
+  <object id="17" name="save" type="save_variable" x="368" y="440">
    <properties>
     <property name="_then" type="object" value="16"/>
     <property name="saved_variable_name" value="question_response_answer"/>
@@ -132,7 +128,7 @@
    </properties>
    <point/>
   </object>
-  <object id="18" name="load" type="load_variable" x="376" y="552">
+  <object id="18" name="load" type="load_variable" x="368" y="504">
    <properties>
     <property name="_then" type="object" value="10"/>
     <property name="saved_variable_name" value="question_response_answer"/>
@@ -153,9 +149,7 @@
   <object id="25" x="584" y="384"/>
   <object id="28" name="create shademan" type="create_bot" x="592" y="496">
    <properties>
-    <property name="_then" type="object" value="47"/>
     <property name="bot" type="object" value="29"/>
-    <property name="on_actor_interaction" type="object" value="31"/>
    </properties>
    <point/>
   </object>
@@ -183,7 +177,6 @@
   <object id="34" name="create prog" type="create_bot" x="592" y="464">
    <properties>
     <property name="bot" type="object" value="30"/>
-    <property name="on_actor_interaction" type="object" value="31"/>
    </properties>
    <point/>
   </object>
@@ -221,7 +214,7 @@
   </object>
   <object id="41" type="lock_player_input" x="592" y="528">
    <properties>
-    <property name="_then" type="object" value="36"/>
+    <property name="_then" type="object" value="52"/>
    </properties>
    <point/>
   </object>
@@ -244,25 +237,18 @@ The darker the better!!!</property>
   </object>
   <object id="49" name="all" type="all" x="560" y="464">
    <properties>
-    <property name="_then2" type="object" value="28"/>
+    <property name="_then" type="object" value="28"/>
     <property name="_then3" type="object" value="34"/>
     <property name="_then4" type="object" value="55"/>
     <property name="_then5" type="object" value="48"/>
    </properties>
    <point/>
   </object>
-  <object id="50" name="sleep" type="sleep" x="560" y="496">
-   <properties>
-    <property name="_then" type="object" value="49"/>
-    <property name="duration" type="float" value="0.2"/>
-   </properties>
-   <point/>
-  </object>
   <object id="52" name="fade out" type="fade_player_camera" x="560" y="528">
    <properties>
-    <property name="_then" type="object" value="50"/>
     <property name="color" type="object" value="37"/>
     <property name="durationInSeconds" type="float" value="0.5"/>
+    <property name="on_duration_elapsed" type="object" value="49"/>
    </properties>
    <point/>
   </object>
@@ -283,7 +269,6 @@ The darker the better!!!</property>
   </object>
   <object id="55" name="camera" type="move_player_camera" x="624" y="464">
    <properties>
-    <property name="_then" type="object" value="61"/>
     <property name="song_path" value="/server/assets/music/distortion_bn6.ogg"/>
    </properties>
    <point/>
@@ -348,7 +333,7 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="70" name="move bot" type="walk_bot" x="648" y="632">
+  <object id="70" name="move bot" type="walk_bot" x="648" y="592">
    <properties>
     <property name="_then" type="object" value="79"/>
    </properties>
@@ -369,15 +354,6 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="75" name="fade out" type="fade_player_camera" x="608" y="232">
-   <properties>
-    <property name="_then" type="object" value="50"/>
-    <property name="color" type="object" value="76"/>
-    <property name="durationInSeconds" type="float" value="0.5"/>
-    <property name="on_duration_elapsed" type="object" value="44"/>
-   </properties>
-   <point/>
-  </object>
   <object id="76" name="black" type="color_details" x="576" y="232">
    <properties>
     <property name="a" type="int" value="255"/>
@@ -387,7 +363,7 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="77" name="fade out" type="fade_player_camera" x="608" y="232">
+  <object id="77" name="fade out" type="fade_player_camera" x="608" y="240">
    <properties>
     <property name="_then" type="object" value="87"/>
     <property name="color" type="object" value="76"/>
@@ -437,9 +413,9 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="90" name="mystery_data" type="function_netflow" x="840" y="992">
+  <object id="90" name="mystery_data" type="function_netflow" x="944" y="992">
    <properties>
-    <property name="_then" type="object" value="127"/>
+    <property name="_then" type="object" value="184"/>
     <property name="function_name" value="mystery_data"/>
    </properties>
    <point/>
@@ -466,6 +442,9 @@ The darker the better!!!</property>
    <point/>
   </object>
   <object id="109" name="remove mystery data" type="remove_object" x="224" y="968">
+   <properties>
+    <property name="_then" type="object" value="186"/>
+   </properties>
    <point/>
   </object>
   <object id="111" name="item_id check" type="expression" x="504" y="992">
@@ -522,6 +501,7 @@ The darker the better!!!</property>
   </object>
   <object id="134" name="switch" type="switch" x="688" y="912">
    <properties>
+    <property name="_default" type="object" value="186"/>
     <property name="true" type="object" value="135"/>
     <property name="variable_name" value="player_has_item"/>
    </properties>
@@ -529,6 +509,7 @@ The darker the better!!!</property>
   </object>
   <object id="135" name="unlock question" type="question_player" x="640" y="904">
    <properties>
+    <property name="on_no" type="object" value="186"/>
     <property name="on_yes" type="object" value="180"/>
     <property name="question" value="Use Unlocker to open it?"/>
    </properties>
@@ -584,9 +565,6 @@ The darker the better!!!</property>
    <point/>
   </object>
   <object id="150" name="reward text" type="message_player" x="24" y="816">
-   <properties>
-    <property name="_then" type="object" value="161"/>
-   </properties>
    <point/>
   </object>
   <object id="151" name="call gift_money" type="call_function_netflow" x="336" y="896">
@@ -644,12 +622,6 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="161" name="callback" type="function_netflow_callback" x="-16" y="816">
-   <point/>
-  </object>
-  <object id="162" name="callback" type="function_netflow_callback" x="16" y="1152">
-   <point/>
-  </object>
   <object id="163" name="save_money" type="save_variable" x="88" y="816">
    <properties>
     <property name="_then" type="object" value="149"/>
@@ -660,7 +632,6 @@ The darker the better!!!</property>
   </object>
   <object id="164" name="save_keyitem" type="save_variable" x="56" y="1152">
    <properties>
-    <property name="_then" type="object" value="162"/>
     <property name="unique_to_player_secret" type="bool" value="true"/>
     <property name="variable_name" value="keyitems"/>
    </properties>
@@ -701,12 +672,8 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="176" name="callback" type="function_netflow_callback" x="72" y="1224">
-   <point/>
-  </object>
   <object id="177" name="save_keyitem" type="save_variable" x="112" y="1224">
    <properties>
-    <property name="_then" type="object" value="176"/>
     <property name="unique_to_player_secret" type="bool" value="true"/>
     <property name="variable_name" value="keyitems"/>
    </properties>
@@ -727,12 +694,63 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="180" name="call gift_item" type="call_function_netflow" x="584" y="896">
+  <object id="180" name="call remove_item" type="call_function_netflow" x="584" y="896">
    <properties>
     <property name="discard_function_context" type="bool" value="true"/>
     <property name="function_name" value="remove_item"/>
     <property name="on_callback" type="object" value="138"/>
     <property name="remove_item_id" value="unlocker"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="184" name="get lock" type="get_lock" x="888" y="992">
+   <properties>
+    <property name="lock_alias" value="mystery_data"/>
+    <property name="on_lock_acquired" type="object" value="185"/>
+    <property name="unique_to_area_id" type="bool" value="true"/>
+    <property name="unique_to_object_id" type="bool" value="true"/>
+    <property name="unique_to_player_id" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="185" name="lock player input" type="lock_player_input" x="840" y="992">
+   <properties>
+    <property name="_then" type="object" value="127"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="186" name="unlock input" type="unlock_player_input" x="112" y="920">
+   <properties>
+    <property name="_then" type="object" value="191"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="187" name="release lock" type="release_lock" x="32" y="920">
+   <properties>
+    <property name="lock_alias" value="mystery_data"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="188" type="print" x="392" y="416">
+   <properties>
+    <property name="console_color" propertytype="console_color" value="magenta"/>
+    <property name="print_label" value="end of function netflow"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="189" type="print" x="336" y="568">
+   <properties>
+    <property name="_then" type="object" value="13"/>
+    <property name="console_color" propertytype="console_color" value="magenta"/>
+    <property name="print_label" value="start of function netflow"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="191" name="print" type="print" x="72" y="928">
+   <properties>
+    <property name="_then" type="object" value="187"/>
+    <property name="console_color" propertytype="console_color" value="green"/>
+    <property name="print_label" value="almost done, unlocking..."/>
    </properties>
    <point/>
   </object>

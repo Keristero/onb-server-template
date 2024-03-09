@@ -3,5 +3,8 @@
         "Net",
         "await",
         "Async"
+    ],
+    "Lua.diagnostics.disable": [
+        "unused-local"
     ]
 }

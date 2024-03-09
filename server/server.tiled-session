@@ -3,16 +3,16 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "areas/other_map.tmx",
+    "activeFile": "areas/default.tmx",
     "expandedProjectPaths": [
+        "assets",
+        "areas",
+        "assets/tiles",
+        "assets/denim_b_tiles",
+        "assets/ezlibs-assets",
         "templates",
         "assets/objects",
-        "assets/ezlibs-assets",
-        "areas",
-        ".",
-        "assets/tiles",
-        "assets",
-        "assets/denim_b_tiles"
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -224,13 +224,14 @@
         },
         "areas/default.tmx": {
             "expandedObjectLayers": [
-                2
+                2,
+                4
             ],
-            "scale": 3,
+            "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1395.1666666666665,
-                "y": 654.5
+                "x": 1179.5,
+                "y": 544.5
             }
         },
         "areas/ezlibs.tmx": {
@@ -270,11 +271,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1.5,
+            "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 991.6666666666666,
-                "y": 769.6666666666667
+                "x": 1175.5,
+                "y": 562.5
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
@@ -333,9 +334,11 @@
             "scaleInEditor": 1
         },
         "assets/objects/GreenMysteryData.tsx": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "assets/objects/PurpleMysteryData.tsx": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "assets/objects/coffee.tsx": {
@@ -383,17 +386,16 @@
     "map.width": 40,
     "openFiles": [
         "areas/default.tmx",
-        "areas/other_map.tmx",
-        "assets/objects/BlueMysteryData.tsx"
+        "areas/other_map.tmx"
     ],
     "project": "server.tiled-project",
     "property.type": "string",
     "recentFiles": [
+        "areas/other_map.tmx",
+        "areas/default.tmx",
         "assets/objects/GreenMysteryData.tsx",
         "assets/objects/BlueMysteryData.tsx",
         "assets/objects/PurpleMysteryData.tsx",
-        "areas/default.tmx",
-        "areas/other_map.tmx",
         "assets/objects/coffee.tsx",
         "assets/denim_b_tiles/cybernet-exit_arrows-denim-b.tsx",
         "assets/objects/warp.tsx",
