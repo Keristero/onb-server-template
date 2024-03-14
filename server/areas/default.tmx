@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="188">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="190">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/home_warp.tsx"/>
  <tileset firstgid="30" source="../assets/objects/coffee.tsx"/>
@@ -215,7 +215,7 @@
    <properties>
     <property name="_then" type="object" value="60"/>
     <property name="bot" type="object" value="50"/>
-    <property name="on_actor_interaction" type="object" value="61"/>
+    <property name="on_actor_interaction" type="object" value="189"/>
    </properties>
    <point/>
   </object>
@@ -251,7 +251,7 @@
    </properties>
    <point/>
   </object>
-  <object id="61" name="message player" type="message_player" x="296" y="600">
+  <object id="61" name="message player" type="message_player" x="176" y="568">
    <properties>
     <property name="message" value="STAIRS ARE NOTHING TO ME!"/>
     <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
@@ -694,6 +694,18 @@
    <properties>
     <property name="_then" type="object" value="3"/>
     <property name="_then2" type="object" value="42"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="188" name="set bot dir" type="set_bot_direction" x="216" y="568">
+   <properties>
+    <property name="_then" type="object" value="61"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="189" name="calc direction" type="calc_direction_to_player" x="256" y="568">
+   <properties>
+    <property name="_then" type="object" value="188"/>
    </properties>
    <point/>
   </object>

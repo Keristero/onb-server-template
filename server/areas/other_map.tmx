@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="192">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="207">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/warp.tsx"/>
  <tileset firstgid="31" source="../assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"/>
  <tileset firstgid="175" source="../assets/objects/dish.tsx"/>
  <tileset firstgid="177" source="../assets/objects/BlueMysteryData.tsx"/>
  <tileset firstgid="185" source="../assets/objects/GreenMysteryData.tsx"/>
+ <tileset firstgid="193" source="../assets/objects/Chalkboard.tsx"/>
  <layer id="1" name="Tile Layer 1" width="40" height="40">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -26,10 +27,10 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,76,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,76,76,76,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,76,76,76,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,76,76,76,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,3,3,3,0,0,0,76,76,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,3,3,3,3,0,0,76,76,76,76,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,3,3,3,3,3,3,76,76,76,76,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,3,3,3,3,0,0,76,76,76,76,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,76,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -64,20 +65,21 @@
    </properties>
    <point/>
   </object>
-  <object id="5" name="on start" type="on_start" x="496" y="656">
+  <object id="5" name="on start" type="on_start" x="496" y="784">
    <properties>
     <property name="_then" type="object" value="6"/>
    </properties>
    <point/>
   </object>
-  <object id="6" name="create bot" type="create_bot" x="528" y="656">
+  <object id="6" name="create bot" type="create_bot" x="496" y="760">
    <properties>
+    <property name="_then" type="object" value="205"/>
     <property name="bot" type="object" value="7"/>
     <property name="on_actor_interaction" type="object" value="8"/>
    </properties>
    <point/>
   </object>
-  <object id="7" name="bot details" type="bot_details" x="592" y="656">
+  <object id="7" name="bot details" type="bot_details" x="464" y="656">
    <properties>
     <property name="animation_path" value="/server/assets/ezlibs-assets/eznpcs/sheet/prog.animation"/>
     <property name="name" value="prog"/>
@@ -85,41 +87,41 @@
    </properties>
    <point/>
   </object>
-  <object id="8" name="message player" type="message_player" x="528" y="624">
+  <object id="8" name="message player" type="message_player" x="520" y="760">
    <properties>
-    <property name="message" value="PROGGERS"/>
+    <property name="message" value="WOAH CAN YOU TASTE THE FLAVOUR TEXT?"/>
     <property name="mug_animation_path" value="/server/assets/ezlibs-assets/eznpcs/mug/mug.animation"/>
     <property name="mug_texture_path" value="/server/assets/ezlibs-assets/eznpcs/mug/prog.png"/>
    </properties>
    <point/>
   </object>
-  <object id="10" name="prompt_player" type="prompt_player" x="368" y="472">
+  <object id="10" name="prompt_player" type="prompt_player" x="768" y="1152">
    <properties>
     <property name="_then" type="object" value="17"/>
    </properties>
    <point/>
   </object>
-  <object id="11" name="question_response_text (function_netflow)" type="function_netflow" x="376" y="632">
+  <object id="11" name="question_response_text (function_netflow)" type="function_netflow" x="960" y="1152">
    <properties>
     <property name="_then" type="object" value="189"/>
     <property name="function_name" value="question_response_text"/>
    </properties>
    <point/>
   </object>
-  <object id="13" name="message_player" type="message_player" x="368" y="552">
+  <object id="13" name="message_player" type="message_player" x="832" y="1152">
    <properties>
     <property name="_then" type="object" value="18"/>
    </properties>
    <point/>
   </object>
-  <object id="16" name="map (prompt_answer to message)" type="map" x="368" y="416">
+  <object id="16" name="map (prompt_answer to message)" type="map" x="704" y="1152">
    <properties>
     <property name="_then" type="object" value="188"/>
     <property name="prompt_answer" value="message"/>
    </properties>
    <point/>
   </object>
-  <object id="17" name="save" type="save_variable" x="368" y="440">
+  <object id="17" name="save" type="save_variable" x="736" y="1152">
    <properties>
     <property name="_then" type="object" value="16"/>
     <property name="saved_variable_name" value="question_response_answer"/>
@@ -128,7 +130,7 @@
    </properties>
    <point/>
   </object>
-  <object id="18" name="load" type="load_variable" x="368" y="504">
+  <object id="18" name="load" type="load_variable" x="800" y="1152">
    <properties>
     <property name="_then" type="object" value="10"/>
     <property name="saved_variable_name" value="question_response_answer"/>
@@ -420,13 +422,13 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="105" name="on start" type="on_start" x="432" y="800">
+  <object id="105" name="on start" type="on_start" x="184" y="744">
    <properties>
     <property name="_then" type="object" value="106"/>
    </properties>
    <point/>
   </object>
-  <object id="106" type="create_item" x="368" y="800">
+  <object id="106" type="create_item" x="120" y="744">
    <properties>
     <property name="_then" type="object" value="131"/>
     <property name="item_details" type="object" value="107"/>
@@ -434,7 +436,7 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="107" type="item_details" x="304" y="800">
+  <object id="107" type="item_details" x="56" y="744">
    <properties>
     <property name="description" value="Drkenrgy flows within!"/>
     <property name="name" value="Dark Chip"/>
@@ -478,14 +480,14 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="130" type="item_details" x="304" y="760">
+  <object id="130" type="item_details" x="56" y="704">
    <properties>
     <property name="description" value="Use to unlocked purple mystery data"/>
     <property name="name" value="Unlocker"/>
    </properties>
    <point/>
   </object>
-  <object id="131" type="create_item" x="368" y="760">
+  <object id="131" type="create_item" x="120" y="704">
    <properties>
     <property name="item_details" type="object" value="130"/>
     <property name="item_id" value="unlocker"/>
@@ -731,14 +733,14 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="188" type="print" x="392" y="416">
+  <object id="188" type="print" x="672" y="1152">
    <properties>
     <property name="console_color" propertytype="console_color" value="magenta"/>
     <property name="print_label" value="end of function netflow"/>
    </properties>
    <point/>
   </object>
-  <object id="189" type="print" x="336" y="568">
+  <object id="189" type="print" x="864" y="1152">
    <properties>
     <property name="_then" type="object" value="13"/>
     <property name="console_color" propertytype="console_color" value="magenta"/>
@@ -751,6 +753,76 @@ The darker the better!!!</property>
     <property name="_then" type="object" value="187"/>
     <property name="console_color" propertytype="console_color" value="green"/>
     <property name="print_label" value="almost done, unlocking..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="192" gid="193" x="424" y="536" width="110" height="110">
+   <properties>
+    <property name="flavour_text" value="There is nothing displayed here except a cool S"/>
+   </properties>
+  </object>
+  <object id="193" gid="2147483841" x="344" y="616" width="110" height="110">
+   <properties>
+    <property name="flavour_text">Various graphs showing complicated netflows are shown..
+You cant make any sense of it</property>
+   </properties>
+  </object>
+  <object id="194" name="on_object_interaction" type="on_object_interaction" x="304" y="512">
+   <properties>
+    <property name="_then" type="object" value="196"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="195" name="message player" type="message_player" x="160" y="512">
+   <point/>
+  </object>
+  <object id="196" name="item_id check" type="expression" x="256" y="512">
+   <properties>
+    <property name="_then" type="object" value="197"/>
+    <property name="expression" value="context.flavour_text ~= nil"/>
+    <property name="result_name" value="has_flavour_text"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="197" name="switch" type="switch" x="224" y="512">
+   <properties>
+    <property name="true" type="object" value="200"/>
+    <property name="variable_name" value="has_flavour_text"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="200" name="map" type="map" x="192" y="512">
+   <properties>
+    <property name="_then" type="object" value="195"/>
+    <property name="flavour_text" value="message"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="203" name="face up left" type="set_bot_direction" x="400" y="744">
+   <properties>
+    <property name="_then" type="object" value="206"/>
+    <property name="direction" propertytype="Direction" value="Up Left"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="204" name="face up right" type="set_bot_direction" x="432" y="776">
+   <properties>
+    <property name="_then" type="object" value="205"/>
+    <property name="direction" propertytype="Direction" value="Up Right"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="205" name="sleep" type="sleep" x="432" y="744">
+   <properties>
+    <property name="_then" type="object" value="203"/>
+    <property name="duration" type="float" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="206" name="sleep" type="sleep" x="400" y="776">
+   <properties>
+    <property name="_then" type="object" value="204"/>
+    <property name="duration" type="float" value="1"/>
    </properties>
    <point/>
   </object>
