@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="207">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="239">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/warp.tsx"/>
  <tileset firstgid="31" source="../assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"/>
@@ -139,7 +139,7 @@
    </properties>
    <point/>
   </object>
-  <object id="20" type="collider_trigger" x="608" y="512" width="96" height="56">
+  <object id="20" type="collider_trigger" x="600" y="440" width="112" height="128">
    <properties>
     <property name="on_player_enters_collider" type="object" value="41"/>
    </properties>
@@ -576,7 +576,7 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="153" name="give_item" type="give_player_item" x="256" y="1152">
+  <object id="153" name="give item" type="give_player_item" x="256" y="1152">
    <properties>
     <property name="_then" type="object" value="154"/>
    </properties>
@@ -661,7 +661,7 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="171" name="give_item" type="remove_player_item" x="264" y="1224">
+  <object id="171" name="remove item" type="remove_player_item" x="264" y="1224">
    <properties>
     <property name="_then" type="object" value="178"/>
    </properties>
@@ -721,13 +721,13 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="186" name="unlock input" type="unlock_player_input" x="112" y="920">
+  <object id="186" name="unlock input" type="unlock_player_input" x="192" y="920">
    <properties>
-    <property name="_then" type="object" value="191"/>
+    <property name="_then" type="object" value="187"/>
    </properties>
    <point/>
   </object>
-  <object id="187" name="release lock" type="release_lock" x="32" y="920">
+  <object id="187" name="release lock" type="release_lock" x="152" y="928">
    <properties>
     <property name="lock_alias" value="mystery_data"/>
    </properties>
@@ -748,14 +748,6 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="191" name="print" type="print" x="72" y="928">
-   <properties>
-    <property name="_then" type="object" value="187"/>
-    <property name="console_color" propertytype="console_color" value="green"/>
-    <property name="print_label" value="almost done, unlocking..."/>
-   </properties>
-   <point/>
-  </object>
   <object id="192" gid="193" x="424" y="536" width="110" height="110">
    <properties>
     <property name="flavour_text" value="There is nothing displayed here except a cool S"/>
@@ -763,7 +755,7 @@ The darker the better!!!</property>
   </object>
   <object id="193" gid="2147483841" x="344" y="616" width="110" height="110">
    <properties>
-    <property name="flavour_text">Various graphs showing complicated netflows are shown..
+    <property name="flavour_text">complicated netflows are shown...
 You cant make any sense of it</property>
    </properties>
   </object>
@@ -823,6 +815,130 @@ You cant make any sense of it</property>
    <properties>
     <property name="_then" type="object" value="204"/>
     <property name="duration" type="float" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="207" name="on_tile_interaction (menu)" type="on_tile_interaction" x="344" y="360">
+   <properties>
+    <property name="_then" type="object" value="208"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="208" name="button check" type="expression" x="304" y="360">
+   <properties>
+    <property name="_then" type="object" value="209"/>
+    <property name="expression" value="context.button == 1"/>
+    <property name="result_name" value="menu_button_pressed"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="209" name="switch" type="switch" x="272" y="360">
+   <properties>
+    <property name="true" type="object" value="213"/>
+    <property name="variable_name" value="menu_button_pressed"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="212" name="open bbs" type="open_bbs" x="184" y="360">
+   <properties>
+    <property name="board_name" value="test board"/>
+    <property name="color" type="object" value="217"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="213" name="post 1" type="add_post" x="240" y="360">
+   <properties>
+    <property name="_then" type="object" value="214"/>
+    <property name="on_post_selection" type="object" value="215"/>
+    <property name="read" type="bool" value="true"/>
+    <property name="title" value="send message"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="214" name="post 2" type="add_post" x="208" y="360">
+   <properties>
+    <property name="_then" type="object" value="212"/>
+    <property name="on_post_selection" type="object" value="216"/>
+    <property name="read" type="bool" value="true"/>
+    <property name="title" value="close beebs"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="215" name="message player" type="message_player" x="240" y="328">
+   <properties>
+    <property name="_then" type="object" value="216"/>
+    <property name="message" value="hey, its'a message!"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="216" name="close bbs" type="close_bbs" x="208" y="296">
+   <point/>
+  </object>
+  <object id="217" name="red" type="color_details" x="184" y="384">
+   <properties>
+    <property name="a" type="int" value="255"/>
+    <property name="b" type="int" value="0"/>
+    <property name="g" type="int" value="0"/>
+    <property name="r" type="int" value="255"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="223" name="on player connect" type="on_player_connect" x="136" y="856">
+   <properties>
+    <property name="_then" type="object" value="224"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="224" name="load player money" type="load_variable" x="96" y="856">
+   <properties>
+    <property name="_then" type="object" value="225"/>
+    <property name="unique_to_player_secret" type="bool" value="true"/>
+    <property name="variable_name" value="money"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="225" name="load player money" type="set_player_money" x="56" y="856">
+   <point/>
+  </object>
+  <object id="229" name="on player connect" type="on_player_connect" x="208" y="1056">
+   <properties>
+    <property name="_then" type="object" value="230"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="230" name="load player key items" type="load_variable" x="168" y="1056">
+   <properties>
+    <property name="_then" type="object" value="238"/>
+    <property name="unique_to_player_secret" type="bool" value="true"/>
+    <property name="variable_name" value="keyitems"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="232" name="foreach" type="for_each" x="112" y="1056">
+   <properties>
+    <property name="key_name" value="item_id"/>
+    <property name="on_iterate" type="object" value="237"/>
+    <property name="table_name" value="keyitems"/>
+    <property name="value_name" value="unimportant"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="236" name="give item" type="give_player_item" x="48" y="1056">
+   <point/>
+  </object>
+  <object id="237" type="print" x="80" y="1056">
+   <properties>
+    <property name="_then" type="object" value="236"/>
+    <property name="print_context" type="bool" value="true"/>
+    <property name="print_label" value="iteration giving item"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="238" type="print" x="144" y="1080">
+   <properties>
+    <property name="_then" type="object" value="232"/>
+    <property name="print_context" type="bool" value="true"/>
+    <property name="print_label" value="loaded keyitems"/>
    </properties>
    <point/>
   </object>

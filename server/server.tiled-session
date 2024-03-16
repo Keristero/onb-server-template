@@ -3,16 +3,16 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "areas/default.tmx",
+    "activeFile": "areas/other_map.tmx",
     "expandedProjectPaths": [
-        "assets",
         "assets/objects",
-        "assets/tiles",
-        "areas",
         ".",
-        "templates",
+        "assets/ezlibs-assets",
         "assets/denim_b_tiles",
-        "assets/ezlibs-assets"
+        "assets/tiles",
+        "assets",
+        "areas",
+        "templates"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -227,11 +227,11 @@
                 4,
                 2
             ],
-            "scale": 2,
+            "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1395.5,
-                "y": 536
+                "x": 1352,
+                "y": 620
             }
         },
         "areas/ezlibs.tmx": {
@@ -271,11 +271,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1,
+            "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1366,
-                "y": 542
+                "x": 527.5,
+                "y": 680.5
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
@@ -395,9 +395,9 @@
     "project": "server.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "assets/objects/Chalkboard.tsx",
-        "areas/other_map.tmx",
         "areas/default.tmx",
+        "areas/other_map.tmx",
+        "assets/objects/Chalkboard.tsx",
         "assets/objects/GreenMysteryData.tsx",
         "assets/objects/BlueMysteryData.tsx",
         "assets/objects/PurpleMysteryData.tsx",
