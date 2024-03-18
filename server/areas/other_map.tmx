@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="239">
+<map version="1.8" tiledversion="1.10.2" orientation="isometric" renderorder="right-down" width="40" height="40" tilewidth="64" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="258">
  <tileset firstgid="1" source="../assets/denim_b_tiles/cybernet-floors-denim-2b.tsx"/>
  <tileset firstgid="25" source="../assets/objects/warp.tsx"/>
  <tileset firstgid="31" source="../assets/denim_b_tiles/cybernet-floors-denim-0b.tsx"/>
@@ -449,22 +449,6 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="111" name="item_id check" type="expression" x="504" y="992">
-   <properties>
-    <property name="_then" type="object" value="157"/>
-    <property name="expression" value="context.data_item_id ~= nil"/>
-    <property name="result_name" value="has_item_id"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="113" name="switch" type="switch" x="400" y="992">
-   <properties>
-    <property name="_default" type="object" value="151"/>
-    <property name="true" type="object" value="156"/>
-    <property name="variable_name" value="has_item_id"/>
-   </properties>
-   <point/>
-  </object>
   <object id="127" name="switch" type="switch" x="784" y="992">
    <properties>
     <property name="_default" type="object" value="138"/>
@@ -519,7 +503,7 @@ The darker the better!!!</property>
   </object>
   <object id="138" name="access message" type="message_player" x="592" y="992">
    <properties>
-    <property name="_then" type="object" value="111"/>
+    <property name="_then" type="object" value="157"/>
     <property name="message" value="Accessing mystery data..."/>
    </properties>
    <point/>
@@ -603,9 +587,9 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="157" name="map" type="map" x="456" y="992">
+  <object id="157" name="map" type="map" x="488" y="992">
    <properties>
-    <property name="_then" type="object" value="113"/>
+    <property name="_then" type="object" value="247"/>
     <property name="data_item_id" value="gift_item_id"/>
     <property name="data_money" value="gift_money"/>
    </properties>
@@ -632,7 +616,7 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="164" name="save_keyitem" type="save_variable" x="56" y="1152">
+  <object id="164" name="save_keyitems" type="save_variable" x="56" y="1152">
    <properties>
     <property name="unique_to_player_secret" type="bool" value="true"/>
     <property name="variable_name" value="keyitems"/>
@@ -674,7 +658,7 @@ The darker the better!!!</property>
    </properties>
    <point/>
   </object>
-  <object id="177" name="save_keyitem" type="save_variable" x="112" y="1224">
+  <object id="177" name="save_keyitems" type="save_variable" x="112" y="1224">
    <properties>
     <property name="unique_to_player_secret" type="bool" value="true"/>
     <property name="variable_name" value="keyitems"/>
@@ -759,16 +743,16 @@ The darker the better!!!</property>
 You cant make any sense of it</property>
    </properties>
   </object>
-  <object id="194" name="on_object_interaction" type="on_object_interaction" x="304" y="512">
+  <object id="194" name="on_object_interaction" type="on_object_interaction" x="272" y="496">
    <properties>
     <property name="_then" type="object" value="196"/>
    </properties>
    <point/>
   </object>
-  <object id="195" name="message player" type="message_player" x="160" y="512">
+  <object id="195" name="message player" type="message_player" x="128" y="496">
    <point/>
   </object>
-  <object id="196" name="item_id check" type="expression" x="256" y="512">
+  <object id="196" name="flavour_test check" type="expression" x="224" y="496">
    <properties>
     <property name="_then" type="object" value="197"/>
     <property name="expression" value="context.flavour_text ~= nil"/>
@@ -776,14 +760,14 @@ You cant make any sense of it</property>
    </properties>
    <point/>
   </object>
-  <object id="197" name="switch" type="switch" x="224" y="512">
+  <object id="197" name="switch" type="switch" x="192" y="496">
    <properties>
     <property name="true" type="object" value="200"/>
     <property name="variable_name" value="has_flavour_text"/>
    </properties>
    <point/>
   </object>
-  <object id="200" name="map" type="map" x="192" y="512">
+  <object id="200" name="map" type="map" x="160" y="496">
    <properties>
     <property name="_then" type="object" value="195"/>
     <property name="flavour_text" value="message"/>
@@ -849,9 +833,9 @@ You cant make any sense of it</property>
   <object id="213" name="post 1" type="add_post" x="240" y="360">
    <properties>
     <property name="_then" type="object" value="214"/>
-    <property name="on_post_selection" type="object" value="215"/>
+    <property name="on_post_selection" type="object" value="254"/>
     <property name="read" type="bool" value="true"/>
-    <property name="title" value="send message"/>
+    <property name="title" value="menu 2"/>
    </properties>
    <point/>
   </object>
@@ -864,14 +848,7 @@ You cant make any sense of it</property>
    </properties>
    <point/>
   </object>
-  <object id="215" name="message player" type="message_player" x="240" y="328">
-   <properties>
-    <property name="_then" type="object" value="216"/>
-    <property name="message" value="hey, its'a message!"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="216" name="close bbs" type="close_bbs" x="208" y="296">
+  <object id="216" name="close bbs" type="close_bbs" x="208" y="336">
    <point/>
   </object>
   <object id="217" name="red" type="color_details" x="184" y="384">
@@ -883,13 +860,13 @@ You cant make any sense of it</property>
    </properties>
    <point/>
   </object>
-  <object id="223" name="on player connect" type="on_player_connect" x="136" y="856">
+  <object id="223" name="on player connect" type="on_player_connect" x="176" y="1008">
    <properties>
-    <property name="_then" type="object" value="224"/>
+    <property name="_then" type="object" value="239"/>
    </properties>
    <point/>
   </object>
-  <object id="224" name="load player money" type="load_variable" x="96" y="856">
+  <object id="224" name="load player money" type="load_variable" x="80" y="1008">
    <properties>
     <property name="_then" type="object" value="225"/>
     <property name="unique_to_player_secret" type="bool" value="true"/>
@@ -897,16 +874,16 @@ You cant make any sense of it</property>
    </properties>
    <point/>
   </object>
-  <object id="225" name="load player money" type="set_player_money" x="56" y="856">
+  <object id="225" name="load player money" type="set_player_money" x="48" y="1008">
    <point/>
   </object>
-  <object id="229" name="on player connect" type="on_player_connect" x="208" y="1056">
+  <object id="229" name="on player connect" type="on_player_connect" x="232" y="1056">
    <properties>
     <property name="_then" type="object" value="230"/>
    </properties>
    <point/>
   </object>
-  <object id="230" name="load player key items" type="load_variable" x="168" y="1056">
+  <object id="230" name="load player key items" type="load_variable" x="184" y="1056">
    <properties>
     <property name="_then" type="object" value="238"/>
     <property name="unique_to_player_secret" type="bool" value="true"/>
@@ -914,7 +891,7 @@ You cant make any sense of it</property>
    </properties>
    <point/>
   </object>
-  <object id="232" name="foreach" type="for_each" x="112" y="1056">
+  <object id="232" name="foreach" type="for_each" x="104" y="1056">
    <properties>
     <property name="key_name" value="item_id"/>
     <property name="on_iterate" type="object" value="237"/>
@@ -923,22 +900,93 @@ You cant make any sense of it</property>
    </properties>
    <point/>
   </object>
-  <object id="236" name="give item" type="give_player_item" x="48" y="1056">
+  <object id="236" name="give item" type="give_player_item" x="40" y="1056">
    <point/>
   </object>
-  <object id="237" type="print" x="80" y="1056">
+  <object id="237" type="print" x="72" y="1056">
    <properties>
     <property name="_then" type="object" value="236"/>
+    <property name="console_color" propertytype="console_color" value="magenta"/>
     <property name="print_context" type="bool" value="true"/>
     <property name="print_label" value="iteration giving item"/>
    </properties>
    <point/>
   </object>
-  <object id="238" type="print" x="144" y="1080">
+  <object id="238" type="print" x="136" y="1056">
    <properties>
     <property name="_then" type="object" value="232"/>
+    <property name="console_color" propertytype="console_color" value="blue"/>
     <property name="print_context" type="bool" value="true"/>
     <property name="print_label" value="loaded keyitems"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="239" name="check money" type="expression" x="144" y="1008">
+   <properties>
+    <property name="_then" type="object" value="240"/>
+    <property name="expression" value="context.money ~= nil"/>
+    <property name="result_name" value="money_was_saved"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="240" type="switch" x="112" y="1008">
+   <properties>
+    <property name="true" type="object" value="224"/>
+    <property name="variable_name" value="money"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="247" name="exists" type="exists" x="392" y="992">
+   <properties>
+    <property name="_else" type="object" value="151"/>
+    <property name="_then" type="object" value="156"/>
+    <property name="variable_name" value="gift_item_id"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="249" name="clear context" type="map" x="240" y="328">
+   <properties>
+    <property name="_then" type="object" value="257"/>
+    <property name="discard_rest_of_context" type="bool" value="true"/>
+    <property name="player_id" value="player_id"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="251" name="post 2" type="add_post" x="240" y="304">
+   <properties>
+    <property name="_then" type="object" value="252"/>
+    <property name="on_post_selection" type="object" value="216"/>
+    <property name="read" type="bool" value="true"/>
+    <property name="title" value="close beebs"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="252" name="open bbs" type="open_bbs" x="208" y="304">
+   <properties>
+    <property name="board_name" value="test board 2"/>
+    <property name="color" type="object" value="253"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="253" name="blue" type="color_details" x="208" y="272">
+   <properties>
+    <property name="a" type="int" value="0"/>
+    <property name="b" type="int" value="255"/>
+    <property name="g" type="int" value="0"/>
+    <property name="r" type="int" value="0"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="254" name="close bbs" type="close_bbs" x="240" y="344">
+   <properties>
+    <property name="_then" type="object" value="249"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="257" type="sleep" x="240" y="320">
+   <properties>
+    <property name="_then" type="object" value="251"/>
+    <property name="duration" type="float" value="0.01"/>
    </properties>
    <point/>
   </object>

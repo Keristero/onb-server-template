@@ -6,13 +6,13 @@
     "activeFile": "areas/other_map.tmx",
     "expandedProjectPaths": [
         "assets/objects",
-        ".",
-        "assets/ezlibs-assets",
-        "assets/denim_b_tiles",
-        "assets/tiles",
         "assets",
         "areas",
-        "templates"
+        "assets/tiles",
+        "assets/denim_b_tiles",
+        ".",
+        "templates",
+        "assets/ezlibs-assets"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -224,14 +224,13 @@
         },
         "areas/default.tmx": {
             "expandedObjectLayers": [
-                4,
                 2
             ],
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1352,
-                "y": 620
+                "x": 1144,
+                "y": 470
             }
         },
         "areas/ezlibs.tmx": {
@@ -271,11 +270,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 2,
+            "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 527.5,
-                "y": 680.5
+                "x": 1264.6666666666665,
+                "y": 461.33333333333326
             }
         },
         "assets/denim_b_tiles/cybernet-conveyors-denim-b.tsx": {
